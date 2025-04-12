@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuben Foundation Africa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--tw-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card {
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: scale(1.02);
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.7) 70%, rgba(255, 255, 255, 0.5) 100%), url('https://readdy.ai/api/search-image?query=Beautiful%20African%20landscape%20with%20lush%20green%20fields%2C%20modern%20technology%20integration%2C%20solar%20panels%20in%20rural%20areas%2C%20students%20with%20tablets%2C%20healthcare%20workers%2C%20entrepreneurs%20in%20tech%20hubs%2C%20vibrant%20colors%20of%20Africa%2C%20hopeful%20future%2C%20innovation%20and%20tradition%20blending%20together&width=1920&height=1080&seq=hero123&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
+                    <i class="ri-plant-line text-white ri-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-secondary">Reuben Foundation Africa</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-secondary hover:text-primary font-medium">Home</a>
+                <a href="#about" class="text-secondary hover:text-primary font-medium">About Us</a>
+                <a href="#programs" class="text-secondary hover:text-primary font-medium">Programs</a>
+                <a href="#contact" class="text-secondary hover:text-primary font-medium">Contact</a>
+            </nav>
+            <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                <i class="ri-menu-line text-secondary ri-2x"></i>
+            </button>
+            <button
+                class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Donate
+                Now</button>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section w-full py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">Empowering Africa Through Education,
+                    Health & Innovation</h1>
+                <p class="text-lg text-gray-700 mb-8">At Reuben Foundation Africa, we believe in building a continent
+                    where every individual regardless of background has the opportunity to thrive. We are a
+                    forward-thinking non-profit organization focused on driving sustainable change across education,
+                    healthcare, and entrepreneurship, with a strong focus on modern technologies like Web3, blockchain,
+                    cryptocurrency, and smart agriculture.</p>
+                <p class="text-lg text-gray-700 mb-8">From classrooms to farms, startups to clinics, we're equipping
+                    communities with tools for real progress.</p>
+                <p class="text-lg text-gray-700 mb-8">Together, let's build a smarter, healthier, and more empowered
+                    Africa.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Get
+                        Involved</button>
+                    <button
+                        class="bg-white border border-primary text-primary px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap">Learn
+                        More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-secondary mb-6">Who We Are</h2>
+                    <p class="text-gray-600 mb-6">Reuben Foundation Africa is a non-profit, impact-driven organization
+                        committed to unlocking the potential of African communities through innovation and empowerment.
+                        We operate across sectors to tackle the core issues holding back progress: limited access to
+                        education, lack of quality healthcare, and barriers to economic opportunity.</p>
+                    <p class="text-gray-600 mb-8">We believe that by combining community engagement with forward-looking
+                        technology, Africa's future can be self-sustained, inclusive, and globally competitive.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-secondary bg-opacity-5 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-secondary mb-3">Our Vision</h3>
+                            <p class="text-gray-600">A thriving and tech-enabled Africa where every individual has
+                                access to the knowledge, care, and opportunities needed to succeed.</p>
+                        </div>
+                        <div class="bg-primary bg-opacity-5 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-primary mb-3">Our Mission</h3>
+                            <p class="text-gray-600">To promote education, deliver healthcare, and nurture
+                                entrepreneurship across Africa, using innovation and technology to drive sustainable
+                                development and inclusive growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://readdy.ai/api/search-image?query=Diverse%20group%20of%20African%20professionals%2C%20educators%2C%20healthcare%20workers%2C%20and%20tech%20entrepreneurs%20collaborating%20in%20a%20modern%20office%20space%20with%20digital%20displays%20showing%20impact%20metrics%2C%20educational%20content%2C%20and%20healthcare%20initiatives.%20The%20scene%20shows%20a%20blend%20of%20traditional%20African%20design%20elements%20with%20modern%20technology%2C%20symbolizing%20the%20foundations%20approach%20to%20development.&width=800&height=600&seq=about456&orientation=landscape"
+                        alt="Reuben Foundation Team" class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Our Focus Areas</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">From classrooms to farms, startups to clinics, we're
+                    equipping communities with tools for real progress.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-book-open-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Education Programs</h3>
+                    <p class="text-gray-600 mb-4">We develop and deliver practical education initiatives aimed at
+                        preparing Africa's youth for the demands of a modern, digital-first world.</p>
+                    <ul class="text-gray-600 mb-4 list-disc list-inside space-y-2">
+                        <li>Scholarships & Mentorships</li>
+                        <li>Digital Skills Bootcamps</li>
+                        <li>Web3 & Blockchain Literacy</li>
+                        <li>Financial & Crypto Education</li>
+                        <li>Youth Innovation Labs</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-heart-pulse-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Health Initiatives</h3>
+                    <p class="text-gray-600 mb-4">We work to make healthcare accessible, affordable, and educational,
+                        especially in underserved communities.</p>
+                    <ul class="text-gray-600 mb-4 list-disc list-inside space-y-2">
+                        <li>Community Health Camps</li>
+                        <li>Mobile Clinics</li>
+                        <li>Mental Health Awareness</li>
+                        <li>Maternal & Child Health</li>
+                        <li>Telehealth Pilot Programs</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-lightbulb-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Entrepreneurship & Innovation</h3>
+                    <p class="text-gray-600 mb-4">We support entrepreneurs and innovators with the training, tools, and
+                        capital needed to bring their ideas to life and create sustainable ventures.</p>
+                    <ul class="text-gray-600 mb-4 list-disc list-inside space-y-2">
+                        <li>Smart Agriculture</li>
+                        <li>Startup Incubation</li>
+                        <li>Business Development Workshops</li>
+                        <li>Pitch Competitions & Demo Days</li>
+                        <li>Access to Digital Tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Current & Upcoming Programmes</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">We implement targeted programs that address critical needs
+                    while building capacity for long-term development.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-currency-line text-primary ri-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Crypto Literacy Tour (2025-2030)</h3>
+                        <p class="text-gray-600 mb-4">A continent-wide campaign in Africa to educate youth, traders, and
+                            professionals on cryptocurrency and blockchain.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-seedling-line text-primary ri-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Blockchain for Farmers</h3>
+                        <p class="text-gray-600 mb-4">Teaching farmers how to track supply chains, access markets, and
+                            secure funding using blockchain.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-school-line text-primary ri-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Reuben Academy for Future Innovators</h3>
+                        <p class="text-gray-600 mb-4">A training hub to equip youth with 21st-century skills, from Web3
+                            to Artificial Intelligence (AI).</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-ambulance-line text-primary ri-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Health-on-Wheels Program</h3>
+                        <p class="text-gray-600 mb-4">A mobile health solution targeting rural areas with regular
+                            medical outreach and check-ups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner With Us -->
+    <section id="partner" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Partner With Us</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">We believe in collaboration for greater impact. Whether you
+                    are a non-profit, tech company, health organization, or government agency, Reuben Foundation Africa
+                    is open to partnerships that share our values and vision.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-secondary mb-4">Why partner with us?</h3>
+                    <ul class="text-gray-600 mb-6 list-disc list-inside space-y-2">
+                        <li>Deep community reach and engagement</li>
+                        <li>Proven programs in education, tech, and healthcare</li>
+                        <li>Transparent operations and measurable impact</li>
+                        <li>A shared commitment to Africa's progress</li>
+                    </ul>
+                    <button
+                        class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition">Become
+                        a Partner</button>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-secondary mb-4">Your support helps us build stronger communities
+                    </h3>
+                    <p class="text-gray-600 mb-4">Here's how you can contribute:</p>
+                    <ul class="text-gray-600 mb-6 list-disc list-inside space-y-2">
+                        <li>Donate: One-time or recurring gifts support all our programs.</li>
+                        <li>Volunteer: Lend your time, skills, or expertise.</li>
+                        <li>Fund a Project: Choose a cause and back it directly.</li>
+                        <li>Sponsor a Youth: Provide scholarships or startup capital to change lives.</li>
+                    </ul>
+                    <button
+                        class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition">Donate
+                        Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Join Us in Building Africa's Future</h2>
+            <p class="text-gray-200 max-w-2xl mx-auto mb-8">Together, we can create lasting change across the continent.
+                Whether through volunteering, donating, or partnering, your contribution makes a difference.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Donate
+                    Now</button>
+                <button
+                    class="bg-transparent border border-white text-white px-8 py-3 !rounded-button font-medium hover:bg-white hover:bg-opacity-10 transition whitespace-nowrap">Become
+                    a Partner</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">We'd love to hear from you.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-start mb-4">
+                            <span
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 mr-4">
+                                <i class="ri-mail-line text-primary"></i>
+                            </span>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary mb-1">Email</h4>
+                                <p class="text-gray-600">info@reubenfoundation.africa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-start mb-4">
+                            <span
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 mr-4">
+                                <i class="ri-phone-line text-primary"></i>
+                            </span>
+                            <div>
+                                <h4 class="text-lg font-bold text-secondary mb-1">Phone</h4>
+                                <p class="text-gray-600">+233</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                    <div class="flex items-start mb-4">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 mr-4">
+                            <i class="ri-map-pin-line text-primary"></i>
+                        </span>
+                        <div>
+                            <h4 class="text-lg font-bold text-secondary mb-1">Address</h4>
+                            <p class="text-gray-600">Accra, Ghana</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
+                        <i class="ri-facebook-fill text-gray-600 hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
+                        <i class="ri-twitter-x-fill text-gray-600 hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
+                        <i class="ri-instagram-line text-gray-600 hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
+                        <i class="ri-linkedin-fill text-gray-600 hover:text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="ri-plant-line text-white ri-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Reuben Foundation Africa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-primary">Programs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">Accra, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-mail-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">info@reubenfoundation.africa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-phone-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">+233</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preloader
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+                const preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000);
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            // Add fade-in class and observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('fade-in');
+                observer.observe(section);
+            });
+            // Add animation classes to cards
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.classList.add('program-card');
+            });
+            // Mobile menu toggle
+            const menuButton = document.querySelector('.md\\:hidden');
+            const mobileNav = document.querySelector('nav');
+            menuButton.addEventListener('click', function () {
+                mobileNav.classList.toggle('hidden');
+                mobileNav.classList.toggle('flex');
+                mobileNav.classList.toggle('flex-col');
+                mobileNav.classList.toggle('absolute');
+                mobileNav.classList.toggle('top-16');
+                mobileNav.classList.toggle('left-0');
+                mobileNav.classList.toggle('w-full');
+                mobileNav.classList.toggle('bg-white');
+                mobileNav.classList.toggle('p-4');
+                mobileNav.classList.toggle('shadow-md');
+            });
+        });
+    </script>
+</body>
+
+</html>
