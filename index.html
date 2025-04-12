@@ -92,6 +92,26 @@
         input:focus {
             outline: none;
         }
+
+        .header-nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .header-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FF5722;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav-link:hover::after {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -100,26 +120,33 @@
         <div class="preloader-spinner"></div>
     </div>
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
-                    <i class="ri-plant-line text-white ri-xl"></i>
+    <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="/assets/f4114f8c-5e31-422e-8ac7-07d29b371805.jpg" class="h-20 w-auto hover:scale-105 transition-transform duration-300" alt="Reuben Foundation Logo" />
                 </div>
-                <span class="text-2xl font-bold text-secondary">Reuben Foundation Africa</span>
+                <nav class="hidden md:flex space-x-12">
+                    <a href="#" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Home</a>
+                    <a href="#about" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">About Us</a>
+                    <a href="#programs" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Programs</a>
+                    <a href="#contact" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        Donate Now
+                    </button>
+                    <button class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300" id="mobile-menu-button">
+                        <i class="ri-menu-line text-secondary ri-2x"></i>
+                    </button>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#" class="text-secondary hover:text-primary font-medium">Home</a>
-                <a href="#about" class="text-secondary hover:text-primary font-medium">About Us</a>
-                <a href="#programs" class="text-secondary hover:text-primary font-medium">Programs</a>
-                <a href="#contact" class="text-secondary hover:text-primary font-medium">Contact</a>
+            <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4" id="mobile-nav">
+                <a href="#" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Home</a>
+                <a href="#about" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">About Us</a>
+                <a href="#programs" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Programs</a>
+                <a href="#contact" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Contact</a>
             </nav>
-            <button class="md:hidden w-10 h-10 flex items-center justify-center">
-                <i class="ri-menu-line text-secondary ri-2x"></i>
-            </button>
-            <button
-                class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Donate
-                Now</button>
         </div>
     </header>
     <!-- Hero Section -->
@@ -503,6 +530,14 @@
                     preloader.style.display = 'none';
                 }, 500);
             }, 1000);
+
+            // Mobile menu toggle
+            const menuButton = document.querySelector('#mobile-menu-button');
+            const mobileNav = document.querySelector('#mobile-nav');
+            menuButton.addEventListener('click', function () {
+                mobileNav.classList.toggle('hidden');
+            });
+
             // Intersection Observer for fade-in animations
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -521,21 +556,6 @@
             // Add animation classes to cards
             document.querySelectorAll('.stat-card').forEach(card => {
                 card.classList.add('program-card');
-            });
-            // Mobile menu toggle
-            const menuButton = document.querySelector('.md\\:hidden');
-            const mobileNav = document.querySelector('nav');
-            menuButton.addEventListener('click', function () {
-                mobileNav.classList.toggle('hidden');
-                mobileNav.classList.toggle('flex');
-                mobileNav.classList.toggle('flex-col');
-                mobileNav.classList.toggle('absolute');
-                mobileNav.classList.toggle('top-16');
-                mobileNav.classList.toggle('left-0');
-                mobileNav.classList.toggle('w-full');
-                mobileNav.classList.toggle('bg-white');
-                mobileNav.classList.toggle('p-4');
-                mobileNav.classList.toggle('shadow-md');
             });
         });
     </script>
