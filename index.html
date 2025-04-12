@@ -128,24 +128,24 @@
                 </div>
                 <nav class="hidden md:flex space-x-12">
                     <a href="#" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Home</a>
-                    <a href="#about" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">About Us</a>
-                    <a href="#programs" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Programs</a>
-                    <a href="#contact" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Contact</a>
+                    <a href="/about.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">About Us</a>
+                    <a href="/programs.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Programs</a>
+                    <a href="/contact.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Contact</a>
                 </nav>
                 <div class="flex items-center gap-4">
-                    <button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <a href="/donate.html" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                         Donate Now
-                    </button>
+                    </a>
                     <button class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300" id="mobile-menu-button">
                         <i class="ri-menu-line text-secondary ri-2x"></i>
                     </button>
                 </div>
             </div>
             <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4" id="mobile-nav">
-                <a href="#" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Home</a>
-                <a href="#about" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">About Us</a>
-                <a href="#programs" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Programs</a>
-                <a href="#contact" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Contact</a>
+                <a href="" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Home</a>
+                <a href="/about.html" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">About Us</a>
+                <a href="/programs.html" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Programs</a>
+                <a href="/contact.html" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Contact</a>
             </nav>
         </div>
     </header>
@@ -233,6 +233,7 @@
                         <li>Financial & Crypto Education</li>
                         <li>Youth Innovation Labs</li>
                     </ul>
+                    <button class="bg-white border border-primary text-primary px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition mt-4">Learn More</button>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
                     <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
@@ -248,6 +249,7 @@
                         <li>Maternal & Child Health</li>
                         <li>Telehealth Pilot Programs</li>
                     </ul>
+                    <button class="bg-white border border-primary text-primary px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition mt-4">Learn More</button>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
                     <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
@@ -263,6 +265,7 @@
                         <li>Pitch Competitions & Demo Days</li>
                         <li>Access to Digital Tools</li>
                     </ul>
+                    <button class="bg-white border border-primary text-primary px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition mt-4">Learn More</button>
                 </div>
             </div>
         </div>
@@ -277,48 +280,40 @@
                     while building capacity for long-term development.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div
-                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-xl transition-shadow">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
                             <i class="ri-currency-line text-primary ri-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-secondary mb-3">Crypto Literacy Tour (2025-2030)</h3>
-                        <p class="text-gray-600 mb-4">A continent-wide campaign in Africa to educate youth, traders, and
-                            professionals on cryptocurrency and blockchain.</p>
+                        <p class="text-gray-600">A continent-wide campaign in Africa to educate youth, traders, and professionals on cryptocurrency and blockchain.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div
-                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-xl transition-shadow">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
                             <i class="ri-seedling-line text-primary ri-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-secondary mb-3">Blockchain for Farmers</h3>
-                        <p class="text-gray-600 mb-4">Teaching farmers how to track supply chains, access markets, and
-                            secure funding using blockchain.</p>
+                        <p class="text-gray-600">Teaching farmers how to track supply chains, access markets, and secure funding using blockchain.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div
-                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-xl transition-shadow">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
                             <i class="ri-school-line text-primary ri-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-secondary mb-3">Reuben Academy for Future Innovators</h3>
-                        <p class="text-gray-600 mb-4">A training hub to equip youth with 21st-century skills, from Web3
-                            to Artificial Intelligence (AI).</p>
+                        <p class="text-gray-600">A training hub to equip youth with 21st-century skills, from Web3 to Artificial Intelligence (AI).</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div
-                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-xl transition-shadow">
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
                             <i class="ri-ambulance-line text-primary ri-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-secondary mb-3">Health-on-Wheels Program</h3>
-                        <p class="text-gray-600 mb-4">A mobile health solution targeting rural areas with regular
-                            medical outreach and check-ups.</p>
+                        <p class="text-gray-600">A mobile health solution targeting rural areas with regular medical outreach and check-ups.</p>
                     </div>
                 </div>
             </div>
@@ -485,9 +480,9 @@
                     <h3 class="text-lg font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
                         <li><a href="#" class="text-gray-400 hover:text-primary">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-primary">About Us</a></li>
-                        <li><a href="#programs" class="text-gray-400 hover:text-primary">Programs</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-primary">Contact</a></li>
+                        <li><a href="/about.html" class="text-gray-400 hover:text-primary">About Us</a></li>
+                        <li><a href="/programs.html" class="text-gray-400 hover:text-primary">Programs</a></li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -547,6 +542,14 @@
                 });
             }, {
                 threshold: 0.1
+            });
+            // Add fade-in class and observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('fade-in');
+                observer.observe(section);
+            });
+            // Add animation classes to cards
+            document.querySelectorAll('.stat-card').forEach(card => {
             });
             // Add fade-in class and observe all sections
             document.querySelectorAll('section').forEach(section => {
