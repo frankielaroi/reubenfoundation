@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship & Innovation - Reuben Foundation Africa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--tw-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .header-nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .header-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FF5722;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" class="h-16 w-auto hover:scale-105 transition-transform duration-300" alt="Reuben Foundation Logo" />
+                <div class="ml-4">
+                    <div class="text-right">
+                        <h1 class="text-xl font-bold text-secondary">Reuben Foundation Africa</h1>
+                        <p class="text-gray-600">Investing in Lives</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Home</a>
+                    <a href="/programs.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Programs</a>
+                    <a href="/about.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">About</a>
+                    <a href="/contact.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Contact</a>
+                </nav>
+                <a href="/donate.html" class="hidden md:block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    Donate
+                </a>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300" id="mobile-menu-button">
+                    <i class="ri-menu-line text-secondary ri-2x"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4" id="mobile-nav">
+            <a href="index.html" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Home</a>
+            <a href="/programs.html" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Programs</a>
+            <a href="/about.html" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">About</a>
+            <a href="/contact.html" class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">Entrepreneurship & Innovation</h1>
+            <p class="text-gray-200 max-w-3xl mx-auto">Unlocking Africa's entrepreneurial potential through training, tools, and technology</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <p class="text-gray-700 mb-6">At Reuben Foundation Africa, we believe entrepreneurship is a powerful engine for economic growth, poverty reduction, and sustainable development. That's why we empower African youth, women, and grassroots innovators with the training, tools, networks, and capital they need to turn ideas into thriving businesses.</p>
+                <p class="text-gray-700 mb-6">Our goal is to unlock Africa's entrepreneurial potential by supporting ventures that are not only profitable, but also impact-driven, inclusive, and future-focused.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Agriculture -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-plant-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Smart Agriculture Initiatives</h2>
+                </div>
+                <p class="text-gray-700 mb-6">We help modernize agriculture by training and supporting agripreneurs in:</p>
+                <ul class="text-gray-700 mb-6 list-disc list-inside space-y-2 pl-4">
+                    <li>Sustainable farming techniques</li>
+                    <li>Agritech solutions like precision farming, weather prediction apps, and Internet of Things (IoT) tools</li>
+                    <li>Blockchain for supply chain traceability</li>
+                    <li>Post-harvest storage, food processing, and value addition</li>
+                </ul>
+                <p class="text-gray-700 mb-6">We work with youth and smallholder farmers to increase productivity and profits while protecting the environment.</p>
+                <div class="bg-secondary bg-opacity-5 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Goal</h3>
+                    <p class="text-gray-700">Turn agriculture into a modern, tech-enabled, and youth-friendly business opportunity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Startup Incubation -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-rocket-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Startup Incubation & Acceleration</h2>
+                </div>
+                <p class="text-gray-700 mb-6">Our Startup Incubation Programs focus on:</p>
+                <ul class="text-gray-700 mb-6 list-disc list-inside space-y-2 pl-4">
+                    <li>Supporting early-stage startups, especially in blockchain, fintech, AI, and climate-tech</li>
+                    <li>Providing structured training in product development, go-to-market strategy, and customer acquisition</li>
+                    <li>Offering mentorship from seasoned entrepreneurs, tech experts, and investors</li>
+                </ul>
+                <p class="text-gray-700 mb-6">We also provide access to co-working space, legal/business registration support, and connections to pilot users and funders.</p>
+                <div class="bg-secondary bg-opacity-5 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Goal</h3>
+                    <p class="text-gray-700">Help African startups move from idea to product to market success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Development -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-briefcase-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Business Development Workshops</h2>
+                </div>
+                <p class="text-gray-700 mb-6">Our workshops are practical, interactive, and tailored to the African business environment. We train entrepreneurs on:</p>
+                <ul class="text-gray-700 mb-6 list-disc list-inside space-y-2 pl-4">
+                    <li>Business planning and model development</li>
+                    <li>Marketing and branding strategies</li>
+                    <li>Digital tools (e.g. Canva, Google Workspace, CRM, e-commerce platforms)</li>
+                    <li>Financial literacy and bookkeeping</li>
+                    <li>Scaling strategies and how to pivot when necessary</li>
+                </ul>
+                <p class="text-gray-700 mb-6">We also include modules on social entrepreneurship and sustainable business models.</p>
+                <div class="bg-secondary bg-opacity-5 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Goal</h3>
+                    <p class="text-gray-700">Equip entrepreneurs with the foundational skills needed to launch and grow sustainable businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pitch Competitions -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-presentation-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Pitch Competitions & Demo Days</h2>
+                </div>
+                <p class="text-gray-700 mb-6">We organize local and regional Pitch Events and Demo Days where entrepreneurs can:</p>
+                <ul class="text-gray-700 mb-6 list-disc list-inside space-y-2 pl-4">
+                    <li>Present their business ideas to investors, accelerators, and the community</li>
+                    <li>Win seed capital, mentorship slots, and incubation opportunities</li>
+                    <li>Gain media exposure and validation from a professional jury</li>
+                </ul>
+                <p class="text-gray-700 mb-6">These events create a vibrant entrepreneurial culture and foster networking among startups and investors.</p>
+                <div class="bg-secondary bg-opacity-5 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Goal</h3>
+                    <p class="text-gray-700">Bridge the gap between grassroots innovation and global opportunity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Tools -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-tools-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Access to Digital Tools & Platforms</h2>
+                </div>
+                <p class="text-gray-700 mb-6">We support small businesses and startups in adopting digital tools to enhance their visibility and operations, including:</p>
+                <ul class="text-gray-700 mb-6 list-disc list-inside space-y-2 pl-4">
+                    <li>Setting up e-commerce platforms and online stores</li>
+                    <li>Integration with mobile money and digital payment systems</li>
+                    <li>Training on digital marketing, SEO, and content creation</li>
+                    <li>Tools for customer engagement and online brand building</li>
+                </ul>
+                <div class="bg-secondary bg-opacity-5 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Goal</h3>
+                    <p class="text-gray-700">Help entrepreneurs compete in the digital economy and reach markets beyond their communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equal Access -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-equalizer-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Equal Access & Inclusion</h2>
+                </div>
+                <p class="text-gray-700 mb-6">We actively promote equal opportunity and inclusive innovation by ensuring:</p>
+                <ul class="text-gray-700 mb-6 list-disc list-inside space-y-2 pl-4">
+                    <li>Equal participation of men/women, youth, persons with disabilities, and rural entrepreneurs</li>
+                    <li>Training programs are affordable or free, with language and accessibility support</li>
+                    <li>Selection of trainers and mentors from diverse backgrounds</li>
+                    <li>Emphasis on sustainable business practices and solving local challenges</li>
+                </ul>
+                <div class="bg-secondary bg-opacity-5 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Goal</h3>
+                    <p class="text-gray-700">Build a fair and inclusive entrepreneurship ecosystem where anyone with a vision can succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-700 mb-8">At Reuben Foundation Africa, our entrepreneurship and innovation programs go beyond business; they aim to transform communities, create jobs, and inspire the next generation of African change-makers. By fusing technology, training, funding, and mentorship, we're building a future where African-led innovation shapes Africa's growth.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Support Our Programs</button>
+                    <button class="bg-white border border-primary text-primary px-8 py-3 rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap">Get Involved</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="ri-plant-line text-white ri-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Reuben Foundation Africa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary">Home</a></li>
+                        <li><a href="/about.html" class="text-gray-400 hover:text-primary">About Us</a></li>
+                        <li><a href="/programs.html" class="text-gray-400 hover:text-primary">Programs</a></li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">Accra, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-mail-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">info@reubenfoundation.africa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-phone-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">+233</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preloader
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+                const preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000);
+
+            // Mobile menu toggle
+            const menuButton = document.querySelector('#mobile-menu-button');
+            const mobileNav = document.querySelector('#mobile-nav');
+            menuButton.addEventListener('click', function () {
+                mobileNav.classList.toggle('hidden');
+            });
+
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            // Add fade-in class and observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('fade-in');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
