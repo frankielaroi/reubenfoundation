@@ -85,6 +85,38 @@
         .header-nav-link:hover::after {
             width: 100%;
         }
+
+        .donation-card {
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .copy-button {
+            position: relative;
+        }
+
+        .copy-button::before {
+            content: 'Copy';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0A2540;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .copy-button:hover::before {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -108,17 +140,21 @@
             <div class="flex items-center gap-4">
                 <nav class="hidden md:flex space-x-8">
                     <a href="/index.html"
-                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Home</a>
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-home-line mr-2"></i>Home</a>
                     <a href="/programs.html"
-                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Programs</a>
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-stack-line mr-2"></i>Programs</a>
                     <a href="/about.html"
-                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">About</a>
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-information-line mr-2"></i>About</a>
                     <a href="/contact.html"
-                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">Contact</a>
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-mail-line mr-2"></i>Contact</a>
                 </nav>
                 <a href="/donate.html"
                     class="hidden md:block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                    Donate
+                    <i class="ri-heart-line mr-2"></i>Donate
                 </a>
                 <button
                     class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300"
@@ -130,59 +166,87 @@
         <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4"
             id="mobile-nav">
             <a href="#"
-                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Home</a>
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-home-line mr-2"></i>Home</a>
             <a href="/programs.html"
-                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Programs</a>
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-stack-line mr-2"></i>Programs</a>
             <a href="/about.html"
-                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">About</a>
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-information-line mr-2"></i>About</a>
             <a href="/contact.html"
-                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">Contact</a>
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-mail-line mr-2"></i>Contact</a>
         </nav>
     </header>
 
     <!-- Page Banner -->
     <section class="bg-secondary py-20">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Donate to Reuben Foundation Africa</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <i class="ri-hand-heart-line mr-3"></i>Donate to Reuben Foundation Africa</h1>
             <p class="text-xl text-white/80 max-w-3xl mx-auto">Your contribution helps us drive change across Africa.</p>
         </div>
     </section>
 
-    <!-- Donation Options -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-secondary mb-4">Make a Difference</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">Every donation, big or small, helps us continue our mission of empowering Africa through education, healthcare, and innovation.</p>
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-secondary mb-4">
+                <i class="ri-gift-line mr-2"></i>Make a Difference</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Every donation, big or small, helps us continue our mission of
+                empowering Africa through education, healthcare, and innovation.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="donation-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                    <i class="ri-coin-line text-primary ri-2x"></i>
+                </div>
+                <h3 class="text-xl font-bold text-secondary mb-3">Cryptocurrency Donations</h3>
+                <div class="space-y-4">
+                    <div class="relative">
+                        <p class="font-medium text-secondary flex items-center gap-2"><i class="ri-bitcoin-fill text-yellow-500"></i>Bitcoin Address:</p>
+                        <div class="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
+                            <p class="text-gray-600 break-all">18Ewpfpt3QAotFzoQmBnwCfPY9fJLsWo8M</p>
+                            <button onclick="navigator.clipboard.writeText('18Ewpfpt3QAotFzoQmBnwCfPY9fJLsWo8M')" class="copy-button text-primary hover:text-opacity-80">
+                                <i class="ri-file-copy-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <p class="font-medium text-secondary flex items-center gap-2"><i class="ri-coin-fill text-green-500"></i>USDT TRON (TRC20):</p>
+                        <div class="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
+                            <p class="text-gray-600 break-all">TR8mAD4TuqPhABvCtXdBfLTtp1uBDbd7re</p>
+                            <button onclick="navigator.clipboard.writeText('TR8mAD4TuqPhABvCtXdBfLTtp1uBDbd7re')" class="copy-button text-primary hover:text-opacity-80">
+                                <i class="ri-file-copy-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <p class="font-medium text-secondary flex items-center gap-2"><i class="ri-ethereum-fill text-purple-500"></i>USDT ERC20:</p>
+                        <div class="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
+                            <p class="text-gray-600 break-all">0x7c73d2f4360a58855db6119ee9ccf8f21c5d20b5</p>
+                            <button onclick="navigator.clipboard.writeText('0x7c73d2f4360a58855db6119ee9ccf8f21c5d20b5')" class="copy-button text-primary hover:text-opacity-80">
+                                <i class="ri-file-copy-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                        <i class="ri-book-open-line text-primary ri-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-secondary mb-3">Education</h3>
-                    <p class="text-gray-600 mb-4">Support our education programs and help us provide scholarships, digital skills training, and more.</p>
-                    <a href="#" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition">Donate Now</a>
+            <div class="donation-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                    <i class="ri-bank-line text-primary ri-2x"></i>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                        <i class="ri-heart-pulse-line text-primary ri-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-secondary mb-3">Healthcare</h3>
-                    <p class="text-gray-600 mb-4">Help us improve healthcare access in underserved communities through our mobile clinics and health education initiatives.</p>
-                    <a href="#" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition">Donate Now</a>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                        <i class="ri-lightbulb-line text-primary ri-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-secondary mb-3">Innovation</h3>
-                    <p class="text-gray-600 mb-4">Invest in the future of Africa by supporting our entrepreneurship and innovation programs.</p>
-                    <a href="#" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition">Donate Now</a>
-                </div>
+                <h3 class="text-xl font-bold text-secondary mb-3">Bank Transfer</h3>
+                <p class="text-gray-600 mb-4">For bank transfer details and other payment methods, please contact us.
+                </p>
+                <a href="/contact.html"
+                    class="inline-flex items-center bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition">
+                    <i class="ri-customer-service-line mr-2"></i>Contact Us</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- How Your Donation Helps -->
     <section class="py-16 bg-gray-50">
