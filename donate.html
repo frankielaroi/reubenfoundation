@@ -216,9 +216,10 @@
                         </svg>Bitcoin Address:</p>
                         <div class="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
                             <p class="text-gray-600 break-all">18Ewpfpt3QAotFzoQmBnwCfPY9fJLsWo8M</p>
-                            <button onclick="navigator.clipboard.writeText('18Ewpfpt3QAotFzoQmBnwCfPY9fJLsWo8M')" class="copy-button text-primary hover:text-opacity-80">
-                                <i class="ri-file-copy-line"></i>
-                            </button>
+                        <button onclick="copyToClipboard(this, '18Ewpfpt3QAotFzoQmBnwCfPY9fJLsWo8M')"
+                            class="copy-button text-primary hover:text-opacity-80">
+                            <i class="ri-file-copy-line"></i>
+                        </button>
                         </div>
                     </div>
                     <div class="relative">
@@ -230,9 +231,10 @@
                         </svg>USDT TRON or TRC20:</p>
                         <div class="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
                             <p class="text-gray-600 break-all">TR8mAD4TuqPhABvCtXdBfLTtp1uBDbd7re</p>
-                            <button onclick="navigator.clipboard.writeText('TR8mAD4TuqPhABvCtXdBfLTtp1uBDbd7re')" class="copy-button text-primary hover:text-opacity-80">
-                                <i class="ri-file-copy-line"></i>
-                            </button>
+                    <button onclick="copyToClipboard(this, 'TR8mAD4TuqPhABvCtXdBfLTtp1uBDbd7re')"
+                        class="copy-button text-primary hover:text-opacity-80">
+                        <i class="ri-file-copy-line"></i>
+                    </button>
                         </div>
                     </div>
                     <div class="relative">
@@ -244,9 +246,10 @@
                         </svg>USDT Ethereum (ERC20):</p>
                         <div class="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
                             <p class="text-gray-600 break-all">0x7c73d2f4360a58855db6119ee9ccf8f21c5d20b5</p>
-                            <button onclick="navigator.clipboard.writeText('0x7c73d2f4360a58855db6119ee9ccf8f21c5d20b5')" class="copy-button text-primary hover:text-opacity-80">
-                                <i class="ri-file-copy-line"></i>
-                            </button>
+                        <button onclick="copyToClipboard(this, '0x7c73d2f4360a58855db6119ee9ccf8f21c5d20b5')"
+                            class="copy-button text-primary hover:text-opacity-80">
+                            <i class="ri-file-copy-line"></i>
+                        </button>
                         </div>
                     </div>
                 </div>
@@ -378,6 +381,7 @@
     </footer>
 
     <script>
+    
         document.addEventListener('DOMContentLoaded', function () {
             // Preloader
             setTimeout(() => {
@@ -424,6 +428,44 @@
                 }
             });
         });
+       function copyToClipboard(button, text) {
+            // Copy text to clipboard
+            navigator.clipboard.writeText(text);
+
+            // Create tooltip element
+            const tooltip = document.createElement('div');
+            tooltip.textContent = 'Copied!';
+            tooltip.style.position = 'absolute';
+            tooltip.style.top = '-30px';
+            tooltip.style.left = '50%';
+            tooltip.style.transform = 'translateX(-50%)';
+            tooltip.style.background = '#0A2540';
+            tooltip.style.color = '#fff';
+            tooltip.style.padding = '4px 8px';
+            tooltip.style.borderRadius = '4px';
+            tooltip.style.fontSize = '12px';
+            tooltip.style.whiteSpace = 'nowrap';
+            tooltip.style.zIndex = '1000';
+            tooltip.style.opacity = '0';
+            tooltip.style.transition = 'opacity 0.3s ease';
+
+            // Append tooltip to the button
+            button.style.position = 'relative';
+            button.appendChild(tooltip);
+
+            // Show tooltip
+            setTimeout(() => {
+                tooltip.style.opacity = '1';
+            }, 10);
+
+            // Remove tooltip after 2 seconds
+            setTimeout(() => {
+                tooltip.style.opacity = '0';
+                setTimeout(() => {
+                    button.removeChild(tooltip);
+                }, 300);
+            }, 2000);
+        }
     </script>
 </body>
 
