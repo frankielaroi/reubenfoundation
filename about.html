@@ -100,6 +100,10 @@
 </head>
 
 <body class="bg-gray-50">
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+        <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
     <div class="preloader">
         <div class="preloader-spinner"></div>
     </div>
@@ -176,8 +180,14 @@
                     <p class="text-gray-600 mb-6 text-justify">Reuben Foundation Africa was born out of a deep desire to transform lives across the continent through practical, sustainable solutions. Founded by Mr. Reuben Asare, a Ghanaian entrepreneur and advocate for inclusive development, the foundation began with one simple belief: <em>Africa’s greatest asset is its people—especially its youth</em>.</p>
                     <p class="text-gray-600 mb-6 text-justify">Witnessing firsthand the struggles of students who couldn’t afford an education, communities without access to basic healthcare, and young entrepreneurs lacking the support to bring their ideas to life, Reuben knew something had to change. He envisioned a foundation that would not only provide relief but create real opportunities—for growth, for empowerment, and for lasting impact.</p>
                     <p class="text-gray-600 mb-6 text-justify">From humble beginnings, we started reaching out to underserved schools, local health clinics, and grassroots initiatives. What began as small community efforts soon grew into a continent-wide movement focused on education, health, and entrepreneurship.</p>
-                    <p class="text-gray-600 mb-6 text-justify">Today, Reuben Foundation Africa is more than a charity. We are a bridge to opportunity. We are building crypto learning apps designed specifically for Africans who lack knowledge in cryptocurrency and blockchain, launching smart agriculture and Web3 projects, and empowering thousands through scholarships, mentorship, and innovation.</p>
-                    <p class="text-gray-600 text-justify">Our story is still being written—and with your support, we will continue to build a brighter future for Africa, one life at a time.</p>
+                    <p class="text-gray-600 mb-6 text-justify">Today, Reuben Foundation Africa is more than a charity. We are a bridge to opportunity.
+                    We are building crypto learning app designed specifically for Africans who lack knowledge in cryptocurrency and
+                    blockchain technology, launching smart agriculture and Web3 projects, and empowering thousands through scholarships,
+                    mentorship, and innovation.
+</p>
+                    <p class="text-gray-600 text-justify">We are also developing offline digital health record systems powered by blockchain technology to be used by health
+                    centres across Africa — especially in rural communities — to ensure secure, accessible, and consistent healthcare data
+                    for all.</p>
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-lg">
                     <img src="https://img.freepik.com/free-photo/close-up-team-hand-shake_23-2148905515.jpg?t=st=1744506265~exp=1744509865~hmac=dcdf649f5c929986b2193d5aaca6cf8f050f23ca841e3c1e0cec0761b9063061&w=900" alt="Our Story" class="w-full h-full object-cover">
@@ -356,6 +366,20 @@
             document.querySelectorAll('section').forEach(section => {
                 section.classList.add('fade-in');
                 observer.observe(section);
+            });
+
+            // Scroll to Top Button
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
     </script>

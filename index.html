@@ -118,6 +118,10 @@
 </head>
 
 <body class="bg-gray-50">
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+        <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
     <div class="preloader">
         <div class="preloader-spinner"></div>
     </div>
@@ -585,6 +589,20 @@
             // Add animation classes to cards
             document.querySelectorAll('.stat-card').forEach(card => {
                 card.classList.add('program-card');
+            });
+
+            // Scroll to Top Button
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
     </script>
