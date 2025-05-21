@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Change Initiatives - Reuben Foundation Africa</title>
+    <link rel="shortcut icon" href="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--tw-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .header-nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .header-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FF5722;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+        <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png"
+                    class="h-16 w-auto hover:scale-105 transition-transform duration-300" alt="Reuben Foundation Logo" />
+                <div class="ml-4">
+                    <div class="text-right">
+                        <h1 class="text-l font-bold text-secondary">Reuben Foundation Africa</h1>
+                        <p class="text-gray-600 text-xs">We Invest In Changing Lives</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/index.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-home-line mr-2"></i>Home</a>
+                    <a href="/about.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-information-line mr-2"></i>About</a>
+                    <a href="/programs.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-stack-line mr-2"></i>Programs</a>
+                    <a href="/contact.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-mail-line mr-2"></i>Contact</a>
+                </nav>
+                <a href="/donate.html"
+                    class="hidden md:block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <i class="ri-heart-line mr-2"></i>Donate
+                </a>
+                <button
+                    class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300"
+                    id="mobile-menu-button">
+                    <i class="ri-menu-line text-secondary ri-2x"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4"
+            id="mobile-nav">
+            <a href="/index.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-home-line mr-2"></i>Home</a>
+            <a href="/about.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-information-line mr-2"></i>About</a>
+            <a href="/programs.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-stack-line mr-2"></i>Programs</a>
+            <a href="/contact.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-mail-line mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">Social Change Initiatives</h1>
+            <p class="text-gray-200 max-w-3xl mx-auto">Empowering communities to drive meaningful social transformation across Africa</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <p class="text-gray-700 mb-6 text-justify">At Reuben Foundation Africa, we believe that lasting development must be paired with meaningful social change. Our social change initiatives focus on empowering communities to advocate for their rights, develop their own solutions, and build movements that drive systemic transformation.</p>
+                <p class="text-gray-700 mb-6 text-justify">We work at multiple levels—from grassroots mobilization to policy change—connecting local voices to national and continental opportunities for impact. By investing in youth leadership, strategic advocacy, and innovative approaches to social justice, we're helping build a more equitable and prosperous Africa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policy Watch & Advocacy -->
+<section class="py-16 bg-secondary">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Reuben Foundation Africa Student Research and Development Fund
+        </h1>
+        <p class="text-gray-200 max-w-3xl mx-auto italic">Popularly known as the “Student Research Allowance”</p>
+    </div>
+</section>
+
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">Overview</h2>
+        <p class="text-gray-700 mb-6 text-justify">
+            The <b>Reuben Foundation Africa Student Research and Development Fund</b>, popularly referred to as the
+            <b>Student Research Allowance</b>, is a flagship initiative designed to support final-year undergraduate and
+            postgraduate students across Africa undertaking high-impact research projects. The primary goal is to enable
+            students to complete their research, overcome financial barriers, and contribute knowledge to areas crucial
+            to Africa’s development.
+        </p>
+        <p class="text-gray-700 mb-6 text-justify">
+            Initially, the program is available to students in <b>Ghanaian tertiary</b> institutions only, with plans to
+            expand to other African countries soon. The fund addresses financial and logistical challenges students face
+            while conducting meaningful academic research, supporting innovative projects that solve Africa’s
+            developmental issues and advance global knowledge.
+        </p>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">Purpose of the Fund</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li><b>Support Quality Research:</b> Original, student-led research aligned with national and global
+                development goals.</li>
+            <li><b>Remove Financial Barriers:</b> Eases the financial burden of fieldwork, data collection, equipment,
+                and other essential research activities.</li>
+            <li><b>Promote Innovation:</b> Encourages a culture of innovation and relevance, motivating students to
+                explore impactful, community-focused research.</li>
+            <li><b>Strengthen Educational Capacity:</b> Helps tertiary institutions nurture skilled graduates prepared
+                to lead in various sectors across Africa and globally.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">Who Will Be Eligible to Apply?</h2>
+        <p class="text-gray-700 mb-4">Open to final-year undergraduate and postgraduate students enrolled in accredited
+            tertiary institutions in Africa, including:</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4 mb-4">
+            <li>Public and private universities</li>
+            <li>Nursing training colleges</li>
+            <li>Teacher training colleges (Colleges of Education)</li>
+            <li>Polytechnics and technical universities</li>
+        </ul>
+        <p class="text-gray-700 mb-4">Initially, only <b>Ghanaian students</b> (including foreign nationals studying in
+            Ghana) are eligible. The fund will later be extended to other African countries.</p>
+        <h3 class="font-semibold text-primary mb-2">Eligibility Requirements:</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li>Final year undergraduate or postgraduate studies</li>
+            <li>Research project required for graduation</li>
+            <li>Demonstrated financial need</li>
+            <li>Research topics endorsed by an academic supervisor and aligned with the fund’s objectives</li>
+        </ul>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">Eligible Research Areas</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li>Health & Public Health</li>
+            <li>Nursing, Midwifery, and Clinical Research</li>
+            <li>Education & Teaching Methodology</li>
+            <li>Agriculture & Food Security</li>
+            <li>Climate & Environmental Sustainability</li>
+            <li>Digital Technology & Innovation (AI, Blockchain, IoT, etc.)</li>
+            <li>Governance, Peace & Development</li>
+            <li>Business, Finance & Economic Research</li>
+            <li>Social Justice, Gender Equality & Inclusion</li>
+            <li>Science, Engineering & Applied Fields</li>
+        </ul>
+    </div>
+</section>
+
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">What Will the Allowance Cover?</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li>Fieldwork and travel</li>
+            <li>Internet and data collection tools</li>
+            <li>Laboratory testing and equipment</li>
+            <li>Research materials, printing, and binding</li>
+            <li>Software, surveys, and analysis tools</li>
+            <li>Communication and transport related to research</li>
+        </ul>
+        <p class="text-gray-700 mt-4">Each grant will be tailored to project needs, with funding capped based on the
+            scope.</p>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">How Will Students Apply?</h2>
+        <ol class="list-decimal list-inside text-gray-700 space-y-2 pl-4 mb-4">
+            <li>Create an account on the Reuben Foundation Africa platform.</li>
+            <li>Submit the following documents:
+                <ul class="list-disc list-inside ml-6">
+                    <li>Research proposal (max 5 pages)</li>
+                    <li>Academic supervisor’s endorsement letter</li>
+                    <li>Transcript or proof of enrollment</li>
+                    <li>National/student ID</li>
+                    <li>Detailed budget breakdown</li>
+                    <li>Optional: CV or portfolio</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">Selection Criteria</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li>Relevance and originality of the research</li>
+            <li>Clarity and feasibility of methodology</li>
+            <li>Potential for impact</li>
+            <li>Academic standing and supervisor endorsement</li>
+            <li>Budget justification</li>
+        </ul>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl font-bold text-secondary mb-4">Disbursement & Reporting</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4 mb-4">
+            <li>Funds disbursed in two phases: 70% upon approval, 30% upon submission of the final report</li>
+            <li>Recipients must submit:
+                <ul class="list-disc list-inside ml-6">
+                    <li>Midway progress report</li>
+                    <li>Final thesis or research report</li>
+                    <li>1-page summary of findings</li>
+                    <li>Optional: Short video reflection/testimonial</li>
+                </ul>
+            </li>
+        </ul>
+        <h3 class="font-semibold text-primary mb-2">Application Timeline</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 pl-4">
+            <li>Applications Open: Early January each year</li>
+            <li>Deadline: June ending</li>
+            <li>Disbursement: Following approval</li>
+        </ul>
+    </div>
+</section>
+
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-secondary mb-4">Support the Future of African Research</h2>
+        <p class="text-gray-700 mb-8 text-justify">
+            Reuben Foundation Africa is committed to empowering the next generation of researchers and innovators. We
+            welcome partnerships with donors, academic institutions, and organizations that share our mission to foster
+            African research, development, and leadership.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/donate.html"
+                class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Support
+                the Fund</a>
+            <a href="/contact.html"
+                class="bg-white border border-primary text-primary px-8 py-3 rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap">Contact
+                Us</a>
+        </div>
+    </div>
+</section>  
+
+    <!-- Conclusion -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-700 mb-8 text-justify">At Reuben Foundation Africa, we recognize that lasting development must be paired with transformative social change. By investing in advocacy, youth activism, strategic storytelling, and movement building, we aim to address not just the symptoms but the root causes of inequity across the continent. Our social change initiatives complement our work in education, health, and entrepreneurship—creating an integrated approach to building a more just, equitable, and thriving Africa.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/donate.html" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Support Our Programs</a>
+                    <a href="/contact.html" class="bg-white border border-primary text-primary px-8 py-3 rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="ri-plant-line text-white ri-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Reuben Foundation Africa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1BTBZGkBq1/?mibextid=wwXIfr" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="https://x.com/reub_fdn_africa?s=11" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/reuben-foundation-africa/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/index.html" class="text-gray-400 hover:text-primary">Home</a></li>
+                        <li><a href="/about.html" class="text-gray-400 hover:text-primary">About Us</a></li>
+                        <li><a href="/programs.html" class="text-gray-400 hover:text-primary">Programs</a></li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">Kumasi, Ashanti Region- Ghana 🇬🇭.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-mail-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">info@reubenfoundation.africa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-phone-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400"><a href="https://wa.link/e2bx9g" class="flex items-center">
+                                <i class="ri-whatsapp-line text-primary mr-2"></i>+233553193813
+                            </a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preloader
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+                const preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000);
+
+            // Mobile menu toggle
+            const menuButton = document.querySelector('#mobile-menu-button');
+            const mobileNav = document.querySelector('#mobile-nav');
+            menuButton.addEventListener('click', function () {
+                mobileNav.classList.toggle('hidden');
+            });
+
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            // Add fade-in class and observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('fade-in');
+                observer.observe(section);
+            });
+
+            // Scroll to Top Button
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
