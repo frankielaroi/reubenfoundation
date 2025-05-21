@@ -47,6 +47,29 @@
         }
     }
     </script>
+    <script>
+        // Dark mode toggle script
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleDarkMode = document.getElementById('dark-mode-toggle');
+            const root = document.documentElement;
+
+            // Load saved theme from localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                root.classList.add(savedTheme);
+            }
+
+            toggleDarkMode.addEventListener('click', () => {
+                if (root.classList.contains('dark')) {
+                    root.classList.remove('dark');
+                    localStorage.setItem('theme', '');
+                } else {
+                    root.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
     <style>
         :where([class^="ri-"])::before {
             content: "\f3c2";
@@ -56,6 +79,8 @@
             font-family: 'Inter', sans-serif;
             opacity: 0;
             transition: opacity 0.5s ease-in;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
 
         .preloader {
@@ -148,10 +173,49 @@
         .header-nav-link:hover::after {
             width: 100%;
         }
+
+        /* Dark mode styles */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        :root.dark {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+
+        .bg-gray-50 {
+            background-color: var(--bg-color);
+        }
+
+        .text-gray-600 {
+            color: var(--text-color);
+        }
+
+        .bg-white {
+            background-color: var(--bg-color);
+        }
+
+        .text-secondary {
+            color: var(--text-color);
+        }
+
+        .bg-gray-900 {
+            background-color: var(--bg-color);
+        }
+
+        .text-gray-400 {
+            color: var(--text-color);
+        }
     </style>
 </head>
 
 <body class="bg-gray-50">
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="fixed top-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+        <i class="ri-moon-line ri-lg"></i>
+    </button>
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
         <i class="ri-arrow-up-line ri-lg"></i>
@@ -240,6 +304,25 @@
             </div>
         </div>
     </section>
+    <!-- Video Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Watch Our Initiatives</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Learn more about our mission and vision for Africa.</p>
+            </div>
+            <div class="flex justify-center">
+                <div class="">
+                    <iframe 
+                        src="https://drive.google.com/file/d/1MOJDjCuInZkwP8DJjq92ZwKrg20MXlub/preview" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen 
+                        class="w-auto h-auto rounded-lg shadow-lg">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Us -->
     <section id="about" class="py-16 bg-white">
@@ -302,11 +385,13 @@
                         preparing Africa's youth for the demands of a modern, digital-first world.</p>
                     <ul
                         class="text-gray-600 mb-4 list-disc list-inside space-y-2 transform transition-all duration-300 hover:translate-x-2">
+                        <li class="hover:text-primary transition-colors duration-300">Loan Support for International African Students.</li>
                         <li class="hover:text-primary transition-colors duration-300">Scholarships & Mentorships</li>
                         <li class="hover:text-primary transition-colors duration-300">Digital Skills Bootcamps</li>
                         <li class="hover:text-primary transition-colors duration-300">Web3 & Blockchain Literacy</li>
                         <li class="hover:text-primary transition-colors duration-300">Financial & Crypto Education</li>
                         <li class="hover:text-primary transition-colors duration-300">Youth Innovation Labs</li>
+
                     </ul>
                                         <a href="/education.html"
                                             class="bg-white border border-primary text-primary px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition mt-4">Learn
@@ -332,11 +417,12 @@
                         especially in underserved communities.</p>
                     <ul
                         class="text-gray-600 mb-4 list-disc list-inside space-y-2 transform transition-all duration-300 hover:translate-x-2">
-                        <li class="hover:text-primary transition-colors duration-300">Community Health Camps</li>
+                        <li class="hover:text-primary transition-colors duration-300">Community Health Camp</li>
                         <li class="hover:text-primary transition-colors duration-300">Mobile Clinics</li>
                         <li class="hover:text-primary transition-colors duration-300">Mental Health Awareness</li>
                         <li class="hover:text-primary transition-colors duration-300">Maternal & Child Health</li>
-                        <li class="hover:text-primary transition-colors duration-300">Telehealth Pilot Programs</li>
+                        <li class="hover:text-primary transition-colors duration-300">Offline Digital Health Record System</li>
+                        <li class="hover:text-primary transition-colors duration-300">Chronic and Vulnerable Health Support</li>
                     </ul>
                                         <a href="/health.html"
                                             class="bg-white border border-primary text-primary px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition mt-4">Learn
@@ -369,6 +455,7 @@
                         <li class="hover:text-primary transition-colors duration-300">Pitch Competitions & Demo Days
                         </li>
                         <li class="hover:text-primary transition-colors duration-300">Access to Digital Tools</li>
+                        <li class="hover:text-primary transition-colors duration-300">Empowering Africa’s Young Footballers</li>
                     </ul>
                                         <a href="/enterprenuership.html"
                                             class="bg-white border border-primary text-primary px-6 py-2 rounded-button font-medium hover:bg-gray-50 transition mt-4">Learn
@@ -485,24 +572,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center space-x-6">
-                    <a href="#"
-                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
-                        <i class="ri-facebook-fill text-gray-600 hover:text-white"></i>
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
-                        <i class="ri-twitter-x-fill text-gray-600 hover:text-white"></i>
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
-                        <i class="ri-instagram-line text-gray-600 hover:text-white"></i>
-                    </a>
-                    <a href="#"
-                        class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition">
-                        <i class="ri-linkedin-fill text-gray-600 hover:text-white"></i>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -520,19 +589,15 @@
                     </div>
                     <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
                     <div class="flex space-x-4">
-                        <a href="#"
+                        <a href="https://www.facebook.com/share/1BTBZGkBq1/?mibextid=wwXIfr"
                             class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
                             <i class="ri-facebook-fill text-white"></i>
                         </a>
-                        <a href="#"
+                        <a href="https://x.com/reub_fdn_africa?s=11"
                             class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
                             <i class="ri-twitter-x-fill text-white"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
-                            <i class="ri-instagram-line text-white"></i>
-                        </a>
-                        <a href="#"
+                        <a href="https://www.linkedin.com/company/reuben-foundation-africa/"
                             class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
                             <i class="ri-linkedin-fill text-white"></i>
                         </a>
