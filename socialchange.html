@@ -11,6 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        (function (s, e, n, d, er) {
+            s['Sender'] = er;
+            s[er] = s[er] || function () {
+                (s[er].q = s[er].q || []).push(arguments)
+            }, s[er].l = 1 * new Date();
+            var a = e.createElement(n),
+                m = e.getElementsByTagName(n)[0];
+            a.async = 1;
+            a.src = d;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+        sender('1bca28fb585662')
+    </script>
     <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
     <style>
         :where([class^="ri-"])::before {
@@ -362,7 +376,8 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About Section -->
                 <div>
                     <div class="flex items-center mb-6">
                         <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
@@ -372,26 +387,36 @@
                     </div>
                     <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/share/1BTBZGkBq1/?mibextid=wwXIfr" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                        <a href="https://www.facebook.com/share/1BTBZGkBq1/?mibextid=wwXIfr"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="Facebook">
                             <i class="ri-facebook-fill text-white"></i>
                         </a>
-                        <a href="https://x.com/reub_fdn_africa?s=11" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                        <a href="https://x.com/reub_fdn_africa?s=11"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="Twitter">
                             <i class="ri-twitter-x-fill text-white"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/reuben-foundation-africa/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                        <a href="https://www.linkedin.com/company/reuben-foundation-africa/"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="LinkedIn">
                             <i class="ri-linkedin-fill text-white"></i>
                         </a>
                     </div>
                 </div>
+    
+                <!-- Quick Links Section -->
                 <div>
                     <h3 class="text-lg font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
-                        <li><a href="/index.html" class="text-gray-400 hover:text-primary">Home</a></li>
-                        <li><a href="/about.html" class="text-gray-400 hover:text-primary">About Us</a></li>
-                        <li><a href="/programs.html" class="text-gray-400 hover:text-primary">Programs</a></li>
-                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary">Contact</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-primary transition">Programs</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact</a></li>
                     </ul>
                 </div>
+    
+                <!-- Contact Section -->
                 <div>
                     <h3 class="text-lg font-bold mb-6">Contact</h3>
                     <ul class="space-y-3">
@@ -399,31 +424,40 @@
                             <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
                                 <i class="ri-map-pin-line text-primary"></i>
                             </span>
-                            <span class="text-gray-400">Kumasi, Ashanti Region- Ghana 🇬🇭.</span>
+                            <span class="text-gray-400">Kumasi, Ashanti Region- Ghana 🇬🇭</span>
                         </li>
                         <li class="flex items-start">
                             <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
                                 <i class="ri-mail-line text-primary"></i>
                             </span>
-                            <span class="text-gray-400">info@reubenfoundation.africa</span>
+                            <a href="mailto:info@reubenfoundation.africa"
+                                class="text-gray-400 hover:text-primary transition">info@reubenfoundation.africa</a>
                         </li>
                         <li class="flex items-start">
                             <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
                                 <i class="ri-phone-line text-primary"></i>
                             </span>
-                            <span class="text-gray-400"><a href="https://wa.link/e2bx9g" class="flex items-center">
-                                <i class="ri-whatsapp-line text-primary mr-2"></i>+233553193813
-                            </a></span>
+                            <a href="https://wa.link/e2bx9g"
+                                class="text-gray-400 hover:text-primary transition flex items-center">
+                                <i class="ri-whatsapp-line text-primary mr-2"></i>
+                                +233553193813
+                            </a>
                         </li>
                     </ul>
                 </div>
+    
+                <!-- Newsletter Section -->
+                <div>
+                    <div class="sender-form-field" data-sender-form-id="maxugvf2en57z5fnojj"></div>
+                </div>
             </div>
+    
+            <!-- Copyright Section -->
             <div class="border-t border-gray-800 mt-12 pt-8 text-center">
                 <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Preloader
