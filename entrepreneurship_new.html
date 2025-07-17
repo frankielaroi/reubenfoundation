@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Program - Reuben Foundation Africa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <meta name="description" content="Entrepreneurship Program at Reuben Foundation Africa - Turning Ideas into Investment-Ready Businesses">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--tw-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .header-nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .header-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FF5722;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #FF5722 0%, #0A2540 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png"
+                    class="h-16 w-auto hover:scale-105 transition-transform duration-300" alt="Reuben Foundation Logo" />
+                <div class="ml-4">
+                    <div class="text-right">
+                        <h1 class="text-l font-bold text-secondary">Reuben Foundation Africa</h1>
+                        <p class="text-gray-600 text-xs">We Invest In Changing Lives</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/index.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-home-line mr-2"></i>Home</a>
+                    <a href="/about.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-information-line mr-2"></i>About</a>
+                    <a href="/programs.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-stack-line mr-2"></i>Programs</a>
+                    <a href="/contact.html" class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-mail-line mr-2"></i>Contact</a>
+                </nav>
+                <a href="/donate.html" class="hidden md:block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <i class="ri-heart-line mr-2"></i>Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Entrepreneurship Program</h1>
+            <p class="text-xl text-gray-100 max-w-4xl mx-auto mb-8">Africa's future depends on bold ideas brought to life by empowered youth. We help young African innovators turn their ideas into sustainable, investment-ready businesses.</p>
+            <p class="text-lg text-gray-200 max-w-3xl mx-auto">Through training, mentorship, and support in areas like business planning, legal registration, and market access, we focus on building ventures that drive economic growth and job creation.</p>
+        </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-6">Our Entrepreneurship Mission</h2>
+                <p class="text-gray-600 text-justify">The Entrepreneurship Program by Reuben Foundation Africa is designed to help young innovators, creatives, and aspiring entrepreneurs transform their ideas into sustainable ventures that can attract investment and drive meaningful impact.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Our Approach</h3>
+                    <p class="text-gray-600 mb-6 text-justify">This program is not about simply handing out funds. Instead, it provides the tools, mentorship, and strategic support young Africans need to build bankable, investor-ready businesses that solve problems, create jobs, and drive inclusive growth.</p>
+                    <p class="text-gray-600 text-justify">We focus on building ventures in agriculture, technology, and creative industries that have the potential to scale and create lasting impact across African communities.</p>
+                </div>
+                <div>
+                    <img src="/assets/enterprenuership/IMG_4135.JPG" alt="Entrepreneurship Programs" class="w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-6">What We Offer</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Comprehensive support to transform your ideas into investment-ready businesses</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Business Development Training -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-presentation-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Business Development Training</h3>
+                    <p class="text-gray-600 text-justify">Participants are trained to craft strong business plans, build scalable models, and create compelling pitch decks tailored for real-world funding opportunities.</p>
+                </div>
+
+                <!-- Legal and Formalization Support -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-file-shield-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Legal & Formalization Support</h3>
+                    <p class="text-gray-600 text-justify">We provide support with business registration, intellectual property (IP) protection, and access to legal experts to ensure that ventures are well-structured and protected.</p>
+                </div>
+
+                <!-- Investment Readiness -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-fund-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Investment Readiness & Market Access</h3>
+                    <p class="text-gray-600 text-justify">Selected entrepreneurs are connected to global investors, development funds, and accelerators. We also guide ventures on how to scale operations and enter local, regional, or global markets.</p>
+                </div>
+
+                <!-- Mentorship and Coaching -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-user-star-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Mentorship & Coaching</h3>
+                    <p class="text-gray-600 text-justify">Each entrepreneur is paired with experienced mentors who provide one-on-one coaching in business strategy, branding, leadership, and operational planning.</p>
+                </div>
+
+                <!-- Creative Grants -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-music-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Creative Grants for Musicians & Artists</h3>
+                    <p class="text-gray-600 text-justify">We offer tailored support to upcoming musicians, artists, and cultural entrepreneurs. This includes small grants, branding and production support, business coaching, and guidance on turning creative talent into sustainable careers.</p>
+                </div>
+
+                <!-- Pitch Platforms -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-megaphone-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Pitch Platforms & Exposure</h3>
+                    <p class="text-gray-600 text-justify">Outstanding ventures are invited to pitch events, innovation showcases, and media features for visibility and potential funding opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Can Apply -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-secondary mb-8">Who Can Apply</h2>
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <p class="text-gray-600 mb-6 text-justify">This program is ideal for young African innovators, creatives, and entrepreneurs who are ready to take their ideas to the next level:</p>
+                    <div class="grid md:grid-cols-2 gap-8 text-left">
+                        <div>
+                            <h3 class="text-lg font-bold text-secondary mb-4">Research to Business</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Participants of our Research Fund with ideas ready for commercialization</li>
+                                <li>• Students and graduates with innovative research projects</li>
+                                <li>• Technical innovators looking to scale their solutions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-secondary mb-4">Creative & Tech Entrepreneurs</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Youth with early-stage businesses or product prototypes</li>
+                                <li>• Creatives, musicians, artists seeking to grow their ventures</li>
+                                <li>• Tech founders and social entrepreneurs</li>
+                                <li>• Innovators with solutions but limited business experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Industries Focus -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-secondary mb-8">Supporting Creative Industries</h2>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-secondary mb-4">Creative Grants Program</h3>
+                            <p class="text-gray-600 mb-6 text-justify">We recognize that Africa's creative industries - music, art, film, fashion, and digital content - are vital economic drivers. Our Creative Grants Program provides specialized support to help artists and creatives build sustainable careers and businesses.</p>
+                            <div class="text-left">
+                                <h4 class="text-lg font-bold text-primary mb-3">What We Offer Creatives:</h4>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Small grants for equipment, production, and marketing</li>
+                                    <li>• Business coaching for creative professionals</li>
+                                    <li>• Brand development and digital marketing support</li>
+                                    <li>• Industry connections and collaboration opportunities</li>
+                                    <li>• IP protection and rights management guidance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="/assets/enterprenuership/crypto.jpeg" alt="Creative Industries" class="w-full rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-6">Building Tomorrow's Leaders</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Our program is designed to create sustainable impact by building the next generation of African business leaders and innovators.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-building-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Job Creation</h3>
+                    <p class="text-gray-600">Building businesses that create employment opportunities for African youth</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-global-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Global Reach</h3>
+                    <p class="text-gray-600">Connecting African innovations with international markets and investors</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-seedling-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">Sustainable Impact</h3>
+                    <p class="text-gray-600">Creating businesses that solve African problems while generating profit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Apply -->
+    <section class="py-20 bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-white mb-8">Ready to Transform Your Ideas?</h2>
+            <p class="text-gray-200 max-w-3xl mx-auto mb-8">To express your interest in the Entrepreneurship Program, please fill out the Contact Us form on our website. A member of our team will reach out with the next steps.</p>
+            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-white mb-4">Turn Your Vision Into Reality</h3>
+                <p class="text-gray-200 mb-6">• Turn your idea into an innovation<br>• Turn your research into a business<br>• Let us build the future of Africa together</p>
+                <a href="/contact.html" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="ri-plant-line text-white ri-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Reuben Foundation Africa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/index.html" class="text-gray-400 hover:text-primary transition">Home</a></li>
+                        <li><a href="/about.html" class="text-gray-400 hover:text-primary transition">About Us</a></li>
+                        <li><a href="/programs.html" class="text-gray-400 hover:text-primary transition">Programs</a></li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">Kumasi, Ashanti Region- Ghana 🇬🇭</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-mail-line text-primary"></i>
+                            </span>
+                            <a href="mailto:info@reubenfoundation.africa" class="text-gray-400 hover:text-primary transition">info@reubenfoundation.africa</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-phone-line text-primary"></i>
+                            </span>
+                            <a href="https://wa.link/e2bx9g" class="text-gray-400 hover:text-primary transition flex items-center">
+                                <i class="ri-whatsapp-line text-primary mr-2"></i>
+                                +233553193813
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
+                    <a href="/newsletter.html" class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition inline-flex items-center">
+                        <i class="ri-mail-send-line mr-2"></i>
+                        Subscribe
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preloader
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+                const preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
