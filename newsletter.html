@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Change Initiatives - Reuben Foundation Africa</title>
+    <title>Newsletter - Reuben Foundation Africa</title>
     <link rel="shortcut icon" href="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,8 +61,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .fade-in {
@@ -74,10 +79,6 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        input:focus {
-            outline: none;
         }
 
         .header-nav-link {
@@ -103,6 +104,10 @@
 </head>
 
 <body class="bg-gray-50">
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="fixed top-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+        <i class="ri-moon-line ri-lg"></i>
+    </button>
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
         <i class="ri-arrow-up-line ri-lg"></i>
@@ -110,7 +115,6 @@
     <div class="preloader">
         <div class="preloader-spinner"></div>
     </div>
-    
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -167,81 +171,72 @@
         </nav>
     </header>
 
-    <!-- Page Header -->
-    <section class="py-16 bg-secondary">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl font-bold text-white mb-4">Social Change Initiatives</h1>
-            <p class="text-gray-200 max-w-3xl mx-auto">Empowering communities to drive meaningful social transformation across Africa</p>
-        </div>
-    </section>
-
-    <!-- Introduction -->
-    <section class="py-16 bg-white">
+    <!-- Newsletter Hero Section -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto">
-                <p class="text-gray-700 mb-6 text-justify">At Reuben Foundation Africa, we believe that lasting development must be paired with meaningful social change. Our social change initiatives focus on empowering communities to advocate for their rights, develop their own solutions, and build movements that drive systemic transformation.</p>
-                <p class="text-gray-700 mb-6 text-justify">We work at multiple levels—from grassroots mobilization to policy change—connecting local voices to national and continental opportunities for impact. By investing in youth leadership, strategic advocacy, and innovative approaches to social justice, we're helping build a more equitable and prosperous Africa.</p>
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">Stay Connected With Our Newsletter</h1>
+                <p class="text-lg text-gray-700 mb-8">Join our community and stay updated with the latest news, events, and impact stories from Reuben Foundation Africa.</p>
             </div>
         </div>
     </section>
-      <!-- Policy Watch & Advocacy -->
-  <section class="py-16 bg-secondary">
-      <div class="container mx-auto px-4 text-center">
-          <h1 class="text-4xl font-bold text-white mb-4">Advocating for Justice, Equity, and the Voice of the African and Black Community Worldwide</h1>
-      </div>
-  </section>
 
-  <section class="py-12 bg-white">
-      <div class="container mx-auto px-4 max-w-4xl">
-          <p class="text-gray-700 mb-6 text-justify">
-              At Reuben Foundation Africa, we believe that real impact goes beyond education, health, and entrepreneurship—it must challenge injustice and inspire systemic change. Our <b>Social Change Program</b> is dedicated to advocating for policies and societal reforms that protect and empower Africans and Black communities globally.
-          </p>
-          <p class="text-gray-700 mb-6 text-justify">
-              We focus on issues that threaten human dignity, freedom, and progress—whether on the African continent or within diaspora communities around the world.
-          </p>
-      </div>
-  </section>
+    <!-- Newsletter Form Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-secondary mb-4">Subscribe to Our Newsletter</h2>
+                        <p class="text-gray-600">Get regular updates on our projects, impact stories, and opportunities to get involved.</p>
+                    </div>
+                    
+                    <!-- Newsletter Form -->
+                    <div class="sender-form-field" data-sender-form-id="maxugvf2en57z5fnojj"></div>
+                    
+                    <div class="mt-8 text-center text-gray-600">
+                        <p class="text-sm">By subscribing, you agree to receive email communications from Reuben Foundation Africa. <br>You can unsubscribe at any time using the link in our emails.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="py-12 bg-gray-50">
-      <div class="container mx-auto px-4 max-w-4xl">
-          <h2 class="text-2xl font-bold text-secondary mb-4">Our Core Focus Areas</h2>
-          <div class="space-y-6">
-              <div>
-                  <h3 class="font-bold text-primary mb-2">1. Policy Watch & Advocacy</h3>
-                  <p class="text-gray-700">We monitor and speak out against laws or policies—local and international—that negatively affect African and Black communities. Whether it's racism, discrimination, migration barriers, or economic injustice, we stand firm with evidence-based advocacy, public awareness campaigns, and collaboration with civil society organizations.</p>
-              </div>
-              <div>
-                  <h3 class="font-bold text-primary mb-2">2. Youth Mobilization & Activism Training</h3>
-                  <p class="text-gray-700">We empower young Africans to raise their voices and take action. Through workshops, bootcamps, and mentorship programs, we train students, activists, and leaders in civic engagement, peaceful protest, public speaking, and legal rights.</p>
-              </div>
-              <div>
-                  <h3 class="font-bold text-primary mb-2">3. Storytelling for Change</h3>
-                  <p class="text-gray-700">We believe stories change hearts and minds. Our media projects—videos, documentaries, podcasts, and written narratives—spotlight real stories of injustice, resistance, and resilience from Black communities across the globe.</p>
-              </div>
-              <div>
-                  <h3 class="font-bold text-primary mb-2">4. Rapid Response Action Fund</h3>
-                  <p class="text-gray-700">When injustice strikes, action cannot wait. We provide small but urgent grants to support activists, community leaders, or student groups who need quick funding to respond to emergencies, organize campaigns, or defend their rights.</p>
-              </div>
-              <div>
-                  <h3 class="font-bold text-primary mb-2">5. Africa Social Change Summit</h3>
-                  <p class="text-gray-700">Our annual summit brings together changemakers, youth, policymakers, artists, and international partners to spotlight pressing social justice issues and co-create action plans for a fairer future.</p>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section class="py-12 bg-white">
-      <div class="container mx-auto px-4 max-w-3xl text-center">
-          <h2 class="text-2xl font-bold text-secondary mb-4">Join the Movement</h2>
-          <p class="text-gray-700 mb-8 text-justify">
-              We're calling on bold thinkers, activists, and partners who want to take a stand. Whether you're in Ghana, the U.S., the U.K., or across Africa, your voice matters. Together, we rise for a better, freer, and more equitable future.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/donate.html" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Support Our Cause</a>
-              <a href="/contact.html" class="bg-white border border-primary text-primary px-8 py-3 rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap">Get Involved</a>
-          </div>
-      </div>
-  </section>
+    <!-- Newsletter Benefits Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Why Subscribe?</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Our newsletter is designed to keep you informed and inspired.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-newspaper-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Latest Updates</h3>
+                    <p class="text-gray-600">Stay informed about our current projects, achievements, and upcoming initiatives across Africa.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-calendar-event-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Event Invitations</h3>
+                    <p class="text-gray-600">Get early access to our workshops, webinars, fundraising events, and community gatherings.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-hand-heart-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">Volunteer Opportunities</h3>
+                    <p class="text-gray-600">Be the first to learn about ways to contribute your skills and time to our mission in Africa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
@@ -314,7 +309,9 @@
                             </a>
                         </li>
                     </ul>
-                </div>                <!-- Newsletter Link Section -->
+                </div>
+    
+                <!-- Newsletter Link Section -->
                 <div>
                     <h3 class="text-lg font-bold mb-6">Newsletter</h3>
                     <p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
@@ -331,6 +328,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Preloader
@@ -383,4 +381,5 @@
         });
     </script>
 </body>
+
 </html>
