@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Fund - Reuben Foundation Africa</title>
+    <link rel="shortcut icon" href="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        (function (s, e, n, d, er) {
+            s['Sender'] = er;
+            s[er] = s[er] || function () {
+                (s[er].q = s[er].q || []).push(arguments)
+            }, s[er].l = 1 * new Date();
+            var a = e.createElement(n),
+                m = e.getElementsByTagName(n)[0];
+            a.async = 1;
+            a.src = d;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+        sender('1bca28fb585662')
+    </script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <meta name="description" content="The Reuben Foundation Research Fund empowers African innovation through funding, mentorship, and support for student research and emerging changemakers.">
+    <meta name="keywords" content="Reuben Foundation Research Fund, African Innovation, Student Research, Startup Funding, African Development, Research Grants">
+    <meta name="author" content="Reuben Foundation Africa">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--tw-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(255, 87, 34, 0.9) 0%, rgba(10, 37, 64, 0.8) 100%), url('https://readdy.ai/api/search-image?query=African%20students%20with%20laptops%20and%20research%20documents%2C%20modern%20laboratory%20setting%2C%20innovation%20hub%2C%20technology%20and%20science%2C%20bright%20future%2C%20collaborative%20workspace%2C%20African%20university%20campus&width=1920&height=1080&seq=research123&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .program-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .focus-area-card {
+            transition: all 0.3s ease;
+        }
+
+        .focus-area-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(255, 87, 34, 0.2);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background-color: #FF5722;
+            border-radius: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% - 1rem);
+            background-color: #e5e7eb;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .header-nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .header-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FF5722;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Dark mode styles */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        :root.dark {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+
+        .bg-gray-50 {
+            background-color: var(--bg-color);
+        }
+
+        .text-gray-600 {
+            color: var(--text-color);
+        }
+
+        .bg-white {
+            background-color: var(--bg-color);
+        }
+
+        .text-secondary {
+            color: var(--text-color);
+        }
+
+        .requirement-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .requirement-icon {
+            flex-shrink: 0;
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="fixed top-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition z-50">
+        <i class="ri-moon-line ri-lg"></i>
+    </button>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+        <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+    
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png"
+                    class="h-16 w-auto hover:scale-105 transition-transform duration-300" alt="Reuben Foundation Logo" />
+                <div class="ml-4">
+                    <div class="text-right">
+                        <h1 class="text-l font-bold text-secondary">Reuben Foundation Africa</h1>
+                        <p class="text-gray-600 text-xs">We Invest In Changing Lives</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/index.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-home-line mr-2"></i>Home</a>
+                    <a href="/about.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-information-line mr-2"></i>About</a>
+                    <a href="/programs.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-stack-line mr-2"></i>Programs</a>
+                    <a href="/contact.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-mail-line mr-2"></i>Contact</a>
+                </nav>
+                <a href="/donate.html"
+                    class="hidden md:block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <i class="ri-heart-line mr-2"></i>Donate
+                </a>
+                <button
+                    class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300"
+                    id="mobile-menu-button">
+                    <i class="ri-menu-line text-secondary ri-2x"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4"
+            id="mobile-nav">
+            <a href="/index.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-home-line mr-2"></i>Home</a>
+            <a href="/about.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-information-line mr-2"></i>About</a>
+            <a href="/programs.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-stack-line mr-2"></i>Programs</a>
+            <a href="/contact.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-mail-line mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section w-full py-20 md:py-32 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+                    Reuben Foundation Research Fund
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 fade-in">
+                    Empowering African Innovation for Global Impact
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                    <a href="#apply" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105">
+                        <i class="ri-file-edit-line mr-2"></i>Apply Now
+                    </a>
+                    <a href="#overview" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+                        <i class="ri-arrow-down-line mr-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center fade-in">Overview</h2>
+                <div class="prose prose-lg max-w-none text-gray-700 fade-in">
+                    <p class="text-lg leading-relaxed mb-6">
+                        The Reuben Foundation Research Fund is a transformative, pan-African initiative committed to supporting bold, research-based innovations developed by African students, graduates, and emerging changemakers. We focus on turning academic research and technical ideas into real-world impact by providing early-stage funding, mentorship, and professional support.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Across Africa, thousands of students complete powerful research projects every year—many tackling critical challenges in health, agriculture, energy, technology, and more. Yet, due to a lack of funding, exposure, and technical backing, much of this work is shelved, forgotten, or never commercialized. This Fund exists to change that.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Whether you're building a healthtech app, designing a clean-energy prototype, developing a new AgriTech tool, or leading a social innovation, we are here to help you turn your research into a solution and your idea into an innovation that can create jobs, build businesses, and solve real problems across Africa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-8 fade-in">Our Mission</h2>
+                <p class="text-lg text-gray-700 mb-8 fade-in">
+                    To unlock the transformative potential of African research by bridging the gap between knowledge and implementation. We aim to build a new generation of African innovators, equipped not just with ideas, but with the resources, mentorship, and platforms to bring them to life.
+                </p>
+                <blockquote class="text-xl md:text-2xl font-semibold text-primary italic bg-white p-8 rounded-lg shadow-lg fade-in">
+                    "Africa's future will not only be imported but it will be invented. And much of it lies in the hands of young Africans ready to build."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Focus Areas -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center fade-in">Key Focus Areas</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center fade-in">
+                    The Research Fund supports a wide range of innovation areas that are directly linked to Africa's development priorities:
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="focus-area-card bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200 fade-in">
+                        <i class="ri-plant-line text-3xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Agriculture & Agribusiness</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg border border-red-200 fade-in">
+                        <i class="ri-heart-pulse-line text-3xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Healthcare & Life Sciences</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-lg border border-yellow-200 fade-in">
+                        <i class="ri-sun-line text-3xl text-yellow-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Green & Renewable Energy</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 fade-in">
+                        <i class="ri-cpu-line text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Digital Innovation, AI & Machine Learning</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200 fade-in">
+                        <i class="ri-graduation-cap-line text-3xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Education & EdTech Solutions</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-lg border border-indigo-200 fade-in">
+                        <i class="ri-bank-card-line text-3xl text-indigo-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Financial Technology (Fintech)</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg border border-gray-200 fade-in">
+                        <i class="ri-tools-line text-3xl text-gray-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Manufacturing & Industrial Design</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-lg border border-cyan-200 fade-in">
+                        <i class="ri-drop-line text-3xl text-cyan-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Water, Sanitation & Hygiene (WASH)</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-emerald-50 to-emerald-100 p-6 rounded-lg border border-emerald-200 fade-in">
+                        <i class="ri-earth-line text-3xl text-emerald-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Climate Change & Environmental Solutions</h3>
+                    </div>
+                    <div class="focus-area-card bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200 fade-in">
+                        <i class="ri-briefcase-line text-3xl text-orange-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Local Production, Value Addition & Job Creation</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center fade-in">What We Offer</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center fade-in">
+                    Successful applicants can benefit from a range of high-impact support services:
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="program-card bg-white p-8 rounded-lg shadow-lg fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-money-dollar-circle-line text-3xl text-primary mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-secondary mb-3">Seed Funding & Grant Capital</h3>
+                                <p class="text-gray-700">Financial support to kickstart your idea or pilot your research</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-card bg-white p-8 rounded-lg shadow-lg fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-user-star-line text-3xl text-primary mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-secondary mb-3">Mentorship & Business Incubation</h3>
+                                <p class="text-gray-700">Expert guidance through our innovation network</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-card bg-white p-8 rounded-lg shadow-lg fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-shield-check-line text-3xl text-primary mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-secondary mb-3">Legal Guidance & IP Support</h3>
+                                <p class="text-gray-700">Commercialization and intellectual property protection</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-card bg-white p-8 rounded-lg shadow-lg fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-tools-fill text-3xl text-primary mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-secondary mb-3">Technical Assistance & Prototype Development</h3>
+                                <p class="text-gray-700">Support in building and refining your innovations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-card bg-white p-8 rounded-lg shadow-lg fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-presentation-line text-3xl text-primary mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-secondary mb-3">Investor Readiness & Pitch Coaching</h3>
+                                <p class="text-gray-700">Preparation for future investment opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-card bg-white p-8 rounded-lg shadow-lg fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-community-line text-3xl text-primary mr-4 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-secondary mb-3">Access to Innovation Hubs & Labs</h3>
+                                <p class="text-gray-700">Regional partner facilities and collaborative spaces</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Can Apply -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center fade-in">Who Can Apply</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center fade-in">
+                    We welcome applications from a diverse group of young African innovators, including:
+                </p>
+                
+                <div class="space-y-8">
+                    <!-- Tertiary Students -->
+                    <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-500 fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-2xl text-green-600 mr-4 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-secondary mb-4">Tertiary Students</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="ri-arrow-right-s-line text-primary mr-2 flex-shrink-0 mt-1"></i>
+                                        Undergraduate and postgraduate students (Master's, MPhil, PhD)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="ri-arrow-right-s-line text-primary mr-2 flex-shrink-0 mt-1"></i>
+                                        Enrolled in African universities, polytechnics, or accredited technical institutions
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Graduates -->
+                    <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500 fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-2xl text-blue-600 mr-4 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-secondary mb-4">Recent Graduates</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="ri-arrow-right-s-line text-primary mr-2 flex-shrink-0 mt-1"></i>
+                                        Graduated within the last 2 years from any recognized tertiary institution in Africa
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="ri-arrow-right-s-line text-primary mr-2 flex-shrink-0 mt-1"></i>
+                                        If beyond 2 years: the project must have originated during or immediately after studies and must still be uncommercialized with strong potential
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Self-Taught Innovators -->
+                    <div class="bg-purple-50 p-8 rounded-lg border-l-4 border-purple-500 fade-in">
+                        <div class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-2xl text-purple-600 mr-4 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-secondary mb-4">Self-Taught or Non-Tertiary Innovators</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="ri-arrow-right-s-line text-primary mr-2 flex-shrink-0 mt-1"></i>
+                                        Must demonstrate strong subject expertise and hands-on experience
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="ri-arrow-right-s-line text-primary mr-2 flex-shrink-0 mt-1"></i>
+                                        Idea must be research-based and practically tested
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="ri-arrow-right-s-line text-primary mr-2 flex-shrink-0 mt-1"></i>
+                                        Must have an advisory or technical mentor involved in the project
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Requirements -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center fade-in">Application Requirements</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center fade-in">
+                    To apply, each applicant or team must submit the following:
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="requirement-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <div class="requirement-icon">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Research Proposal Summary (max 3 pages)</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Clearly describe the problem, your innovation, and its potential impact</li>
+                                <li>• Show how your idea could evolve into a solution, product, or venture</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <div class="requirement-icon">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Proof of Enrollment or Graduation</h3>
+                            <p class="text-gray-700">(optional but preferred)</p>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <div class="requirement-icon">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">CV or Short Profile</h3>
+                            <p class="text-gray-700">Of the lead applicant or team</p>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <div class="requirement-icon">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Early-Stage Feasibility or Implementation Plan</h3>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <div class="requirement-icon">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">5</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Recommendation Letter</h3>
+                            <p class="text-gray-700">From a supervisor, academic mentor, or professional (optional but encouraged)</p>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <div class="requirement-icon">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">6</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Supporting Documents</h3>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Diagrams or sketches</li>
+                                <li>• Prototype photos or demo videos</li>
+                                <li>• Survey data or early test results</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Criteria -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center fade-in">Evaluation Criteria</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center fade-in">
+                    Your application will be reviewed by a panel of experts based on the following:
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-primary/10 to-primary/20 p-8 rounded-lg border border-primary/20 fade-in">
+                        <i class="ri-lightbulb-line text-3xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Innovation & Originality</h3>
+                        <p class="text-gray-700">Uniqueness and creativity of the concept</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg border border-green-200 fade-in">
+                        <i class="ri-global-line text-3xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Relevance to African Development Goals</h3>
+                        <p class="text-gray-700">Alignment with Africa's development priorities</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border border-blue-200 fade-in">
+                        <i class="ri-rocket-line text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Potential for Scalable Impact</h3>
+                        <p class="text-gray-700">Ability to create widespread positive change</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg border border-purple-200 fade-in">
+                        <i class="ri-line-chart-line text-3xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Technical & Financial Feasibility</h3>
+                        <p class="text-gray-700">Viability and sustainability of the solution</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg border border-orange-200 fade-in md:col-span-2">
+                        <i class="ri-user-heart-line text-3xl text-orange-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Passion, Leadership & Commitment</h3>
+                        <p class="text-gray-700">Dedication and drive of the applicant(s) to see the project through</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Timeline -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center fade-in">Application Timeline</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center fade-in">
+                    The Reuben Foundation Research Fund opens for applications once every year.
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="timeline-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Opening Date: January 1</h3>
+                        <p class="text-gray-700">Applications open for submission</p>
+                    </div>
+                    
+                    <div class="timeline-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Deadline: January 31</h3>
+                        <p class="text-gray-700">Final date for application submission</p>
+                    </div>
+                    
+                    <div class="timeline-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Shortlisting: February</h3>
+                        <p class="text-gray-700">Initial review and shortlisting of applications</p>
+                    </div>
+                    
+                    <div class="timeline-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Interviews & Selection: March</h3>
+                        <p class="text-gray-700">Final interviews and selection process</p>
+                    </div>
+                    
+                    <div class="timeline-item bg-white p-6 rounded-lg shadow-lg fade-in">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Grants Disbursed: April</h3>
+                        <p class="text-gray-700">Successful applicants receive funding and support</p>
+                    </div>
+                </div>
+                
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mt-8 rounded-lg fade-in">
+                    <div class="flex">
+                        <i class="ri-alert-line text-2xl text-yellow-600 mr-3 flex-shrink-0"></i>
+                        <div>
+                            <p class="text-yellow-800">
+                                <strong>Important:</strong> Late submissions will not be accepted. Shortlisted applicants may be contacted for further interviews or presentations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Apply -->
+    <section id="apply" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-12 text-center fade-in">How to Apply</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="space-y-6">
+                        <div class="flex items-start fade-in">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">1</span>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Create an applicant account</h3>
+                                <p class="text-gray-700">Register via our online portal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start fade-in">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">2</span>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Fill out the online application form</h3>
+                                <p class="text-gray-700">Complete all required sections</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start fade-in">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">3</span>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Upload all required documents</h3>
+                                <p class="text-gray-700">Ensure all documents are properly formatted</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start fade-in">
+                            <span class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">4</span>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Track status and receive updates</h3>
+                                <p class="text-gray-700">Monitor progress through your dashboard</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-lg fade-in">
+                        <i class="ri-computer-line text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-4">Ready to Apply?</h3>
+                        <p class="text-gray-700 mb-6">Join hundreds of African innovators who are turning their research into reality.</p>
+                        <a href="/contact.html" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 inline-block">
+                            <i class="ri-external-link-line mr-2"></i>Start Your Application
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 fade-in">Let's Build Africa's Future Together</h2>
+                <p class="text-xl mb-8 fade-in">
+                    At Reuben Foundation Africa, we believe every great innovation starts with a single idea but it takes belief, structure, and support to turn that idea into impact.
+                </p>
+                <p class="text-lg mb-8 fade-in">
+                    If you have a research-based solution that can change lives, empower communities, or transform industries, this is your platform.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg fade-in">
+                        <h3 class="text-lg font-semibold mb-2">Turn your idea into innovation</h3>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg fade-in">
+                        <h3 class="text-lg font-semibold mb-2">Turn your research into a solution</h3>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg fade-in">
+                        <h3 class="text-lg font-semibold mb-2">Let's turn Africa's potential into reality</h3>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                    <a href="/contact.html" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105">
+                        <i class="ri-send-plane-line mr-2"></i>Get Started Today
+                    </a>
+                    <a href="/about.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+                        <i class="ri-information-line mr-2"></i>Learn About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="ri-plant-line text-white ri-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Reuben Foundation Africa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1BTBZGkBq1/?mibextid=wwXIfr"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="Facebook">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="https://x.com/reub_fdn_africa?s=11"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="Twitter">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/reuben-foundation-africa/"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div>
+                    <h3 class="text-base font-bold mb-2">Education</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/education/scholarship.html"
+                                class="text-gray-400 hover:text-primary transition">Scholarships</a></li>
+                        <li><a href="/education/research.html" class="text-gray-400 hover:text-primary transition">Research
+                                Fund</a></li>
+                        <li><a href="/education.html" class="text-gray-400 hover:text-primary transition">International
+                                Student Loan</a></li>
+                    </ul>
+    
+                    <h3 class="text-base font-bold mb-1 mt-2">Health & Wellbeing</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/health/healthfund.html" class="text-gray-400 hover:text-primary transition">Health
+                                Access Fund</a></li>
+                        <li><a href="/health.html" class="text-gray-400 hover:text-primary transition">Maternal & Child
+                                Health</a></li>
+                        <li><a href="/health.html" class="text-gray-400 hover:text-primary transition">Mental Health
+                                Support</a></li>
+                        <li><a href="/health/nurses.html" class="text-gray-400 hover:text-primary transition">International Nurse Job Program</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Programs Section 2 -->
+                <div>
+                    <h3 class="text-base font-bold mb-2">Entrepreneurship</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/enterprenuership/startup.html"
+                                class="text-gray-400 hover:text-primary transition">Startup Support Fund</a></li>
+                        <li><a href="/enterprenuership/creative.html"
+                                class="text-gray-400 hover:text-primary transition">Creative Arts Fund</a></li>
+                    </ul>
+    
+                    <h3 class="text-base font-bold mb-1 mt-2">Social Change</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/socialchange/justice.html" class="text-gray-400 hover:text-primary transition">Justice
+                                & Exoneration</a></li>
+                    </ul>
+    
+                    <h3 class="text-base font-bold mb-1 mt-2">Opportunities</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/donate.html" class="text-gray-400 hover:text-primary transition">Apply for a Grant</a>
+                        </li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary transition">Partner With Us</a>
+                        </li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary transition">Volunteer</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-0">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">Kumasi, Ashanti Region- Ghana 🇬🇭</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-mail-line text-primary"></i>
+                            </span>
+                            <a href="mailto:info@reubenfoundation.africa"
+                                class="text-gray-400 hover:text-primary transition">info@reubenfoundation.africa</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-phone-line text-primary"></i>
+                            </span>
+                            <a href="https://wa.link/e2bx9g"
+                                class="text-gray-400 hover:text-primary transition flex items-center">
+                                <i class="ri-whatsapp-line text-primary mr-2"></i>
+                                +233553193813
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                    <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
+                    <a href="/newsletter.html"
+                        class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition inline-flex items-center">
+                        <i class="ri-mail-send-line mr-2"></i>
+                        Subscribe
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Copyright Section -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            const body = document.body;
+            
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                body.style.opacity = '1';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileNav = document.getElementById('mobile-nav');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileNav.classList.toggle('hidden');
+                mobileNav.classList.toggle('flex');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Scroll to top button
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Dark mode toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleDarkMode = document.getElementById('dark-mode-toggle');
+            const root = document.documentElement;
+
+            // Load saved theme from localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                root.classList.add(savedTheme);
+            }
+
+            toggleDarkMode.addEventListener('click', () => {
+                if (root.classList.contains('dark')) {
+                    root.classList.remove('dark');
+                    localStorage.setItem('theme', '');
+                } else {
+                    root.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

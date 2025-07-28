@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship & Mentorship Program - Reuben Foundation Africa</title>
+    <link rel="shortcut icon" href="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        (function (s, e, n, d, er) {
+            s['Sender'] = er;
+            s[er] = s[er] || function () {
+                (s[er].q = s[er].q || []).push(arguments)
+            }, s[er].l = 1 * new Date();
+            var a = e.createElement(n),
+                m = e.getElementsByTagName(n)[0];
+            a.async = 1;
+            a.src = d;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+        sender('1bca28fb585662')
+    </script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <meta name="description" content="The Reuben Foundation Africa Scholarship & Mentorship Program supports high-potential undergraduate students in Africa with financial assistance, mentorship, and research opportunities.">
+    <meta name="keywords" content="Africa Scholarship, Student Mentorship, Education Funding, African Students, Research Program, University Support">
+    <meta name="author" content="Reuben Foundation Africa">
+    <meta property="og:title" content="Scholarship & Mentorship Program - Reuben Foundation Africa">
+    <meta property="og:description" content="Empowering Africa's future leaders through education, mentorship, and research opportunities.">
+    <meta property="og:image" content="/assets/og-image.png">
+    <meta property="og:url" content="https://reubenfoundation.africa/education/scholarship.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scholarship & Mentorship Program - Reuben Foundation Africa">
+    <meta name="twitter:description" content="Empowering Africa's future leaders through education, mentorship, and research opportunities.">
+    <meta name="twitter:image" content="/assets/og-image.png">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--tw-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 2rem;
+            width: 2px;
+            height: calc(100% - 2rem);
+            background: #e5e7eb;
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0.5rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: #FF5722;
+            border-radius: 50%;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+        <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png"
+                    class="h-16 w-auto hover:scale-105 transition-transform duration-300" alt="Reuben Foundation Logo" />
+                <div class="ml-4">
+                    <div class="text-right">
+                        <h1 class="text-l font-bold text-secondary">Reuben Foundation Africa</h1>
+                        <p class="text-gray-600 text-xs">We Invest In Changing Lives</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/index.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-home-line mr-2"></i>Home</a>
+                    <a href="/about.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-information-line mr-2"></i>About</a>
+                    <a href="/programs.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-stack-line mr-2"></i>Programs</a>
+                    <a href="/contact.html"
+                        class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                        <i class="ri-mail-line mr-2"></i>Contact</a>
+                </nav>
+                <a href="/donate.html"
+                    class="hidden md:block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <i class="ri-heart-line mr-2"></i>Donate
+                </a>
+                <button
+                    class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300"
+                    id="mobile-menu-button">
+                    <i class="ri-menu-line text-secondary ri-2x"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4"
+            id="mobile-nav">
+            <a href="/index.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-home-line mr-2"></i>Home</a>
+            <a href="/about.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-information-line mr-2"></i>About</a>
+            <a href="/programs.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-stack-line mr-2"></i>Programs</a>
+            <a href="/contact.html"
+                class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                <i class="ri-mail-line mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-secondary to-blue-900">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl font-bold text-white mb-6">Scholarship & Mentorship Program</h1>
+                <p class="text-xl text-gray-200 mb-8">Empowering Africa's Future Leaders Through Education, Mentorship, and Research</p>
+                <div class="flex items-center justify-center space-x-8 text-white">
+                    <div class="flex items-center">
+                        <i class="ri-graduation-cap-line ri-2x mr-3 text-primary"></i>
+                        <span class="text-lg">Education</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-user-heart-line ri-2x mr-3 text-primary"></i>
+                        <span class="text-lg">Mentorship</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-flask-line ri-2x mr-3 text-primary"></i>
+                        <span class="text-lg">Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-book-open-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Program Overview</h2>
+                </div>
+                <div class="space-y-6 text-gray-700 leading-relaxed">
+                    <p class="text-justify">
+                        The Reuben Foundation Africa Scholarship & Mentorship Program is designed to support high-potential undergraduate students studying in Africa who face financial barriers in accessing quality education. We provide partial or full scholarships to cover tuition, academic fees, and essential learning materials. In some cases, limited support for accommodation or living expenses may also be considered.
+                    </p>
+                    <p class="text-justify">
+                        What makes this program unique is its holistic approach. In addition to financial assistance, each selected student is paired with a mentor, a professional, academic, or industry leader who offers personalized guidance, career mentorship, and emotional support throughout their academic journey.
+                    </p>
+                    <p class="text-justify">
+                        The program also encourages students with a strong interest in research that contributes to Africa's development. We believe that ideas born in classrooms can drive real-world change, and we want to nurture students who aspire to innovate, analyze, and solve pressing issues across the continent.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Objectives -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-target-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Program Objectives</h2>
+                </div>
+                <p class="text-gray-700 mb-8 text-justify leading-relaxed">
+                    Our mission is to create equal access to opportunity for deserving students who have the talent but not the means. Through this program, we aim to:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="ri-money-dollar-circle-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Bridge Financial Gaps</h3>
+                                <p class="text-gray-600">Bridge the financial gap for talented African students in need</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="ri-user-star-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Leadership Development</h3>
+                                <p class="text-gray-600">Provide mentorship and leadership coaching for long-term success</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="ri-team-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Scholar Network</h3>
+                                <p class="text-gray-600">Foster a network of scholars committed to driving transformation in Africa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="ri-lightbulb-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Research & Innovation</h3>
+                                <p class="text-gray-600">Encourage students to engage in meaningful research that addresses Africa's challenges</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-lg md:col-span-2">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="ri-shield-check-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Ethical Leadership</h3>
+                                <p class="text-gray-600">Promote ethical leadership, innovation, and social responsibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Criteria -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-checkbox-circle-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Eligibility Criteria</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                        <i class="ri-check-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Must be an undergraduate student currently enrolled in a recognized African tertiary institution</p>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                        <i class="ri-check-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Demonstrate academic excellence and leadership potential</p>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                        <i class="ri-check-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Come from an underserved or low-income background</p>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                        <i class="ri-check-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Have a clear interest in making a positive impact in Africa through research, leadership, or innovation</p>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                        <i class="ri-check-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Must not currently hold a full scholarship from another source</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Research Focus -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-search-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Special Research Focus</h2>
+                </div>
+                <p class="text-gray-700 mb-8 text-justify leading-relaxed">
+                    We strongly encourage applications from students who:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-start">
+                            <i class="ri-plant-line text-primary ri-lg mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Research Areas</h3>
+                                <p class="text-gray-600">Plan to conduct research on topics related to sustainable development, public policy, agriculture, health, education, climate, or technology in Africa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-start">
+                            <i class="ri-rocket-line text-primary ri-lg mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Innovation Focus</h3>
+                                <p class="text-gray-600">Have ideas that could be transformed into real solutions, community projects, or startups</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg md:col-span-2">
+                        <div class="flex items-start">
+                            <i class="ri-handshake-line text-primary ri-lg mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Collaboration Opportunities</h3>
+                                <p class="text-gray-600">Are eager to collaborate with the Reuben Foundation Research Fund or future incubator opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Mentorship Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-user-heart-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">How the Mentorship Works</h2>
+                </div>
+                <p class="text-gray-700 mb-8 text-justify leading-relaxed">
+                    Each selected student is matched with a mentor based on their academic discipline or career interests. The mentorship includes:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-start">
+                            <i class="ri-calendar-check-line text-primary ri-lg mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Regular Check-ins</h3>
+                                <p class="text-gray-600">Monthly one-on-one check-ins (virtual or in-person)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-start">
+                            <i class="ri-compass-line text-primary ri-lg mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Holistic Guidance</h3>
+                                <p class="text-gray-600">Guidance on academic, career, and personal development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-start">
+                            <i class="ri-group-line text-primary ri-lg mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Networking</h3>
+                                <p class="text-gray-600">Access to leadership workshops and networking opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-start">
+                            <i class="ri-feedback-line text-primary ri-lg mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="text-lg font-semibold text-secondary mb-2">Research Support</h3>
+                                <p class="text-gray-600">Feedback and encouragement for any research or innovation ideas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Responsibilities -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-user-settings-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Student Responsibilities</h2>
+                </div>
+                <p class="text-gray-700 mb-8 text-justify leading-relaxed">
+                    Award recipients must commit to:
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                        <i class="ri-trophy-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Maintaining satisfactory academic performance (minimum GPA requirements apply)</p>
+                    </div>
+                    <div class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                        <i class="ri-user-heart-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Participating fully in mentorship sessions and foundation-led activities</p>
+                    </div>
+                    <div class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                        <i class="ri-file-text-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Submitting semester progress and feedback reports</p>
+                    </div>
+                    <div class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                        <i class="ri-megaphone-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Serving as ambassadors in their universities or communities</p>
+                    </div>
+                    <div class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                        <i class="ri-heart-line text-primary ri-lg mr-4 mt-1"></i>
+                        <p class="text-gray-700">Engaging in one volunteer or community development initiative each year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Impact Goals -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-line-chart-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Program Impact Goals</h2>
+                </div>
+                <p class="text-gray-700 mb-8 text-justify leading-relaxed">
+                    By 2030, the Reuben Foundation Africa aims to:
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-graduation-cap-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">10,000+</h3>
+                        <p class="text-gray-600">Undergraduate students supported across the continent</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-team-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">100+</h3>
+                        <p class="text-gray-600">Mentors from across Africa and the diaspora</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-lightbulb-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">Research</h3>
+                        <p class="text-gray-600">Support students developing research-based solutions to African challenges</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-rocket-line text-primary ri-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">Graduate Track</h3>
+                        <p class="text-gray-600">Launch post-university entrepreneurship, research, and employment support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Timeline -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-6">
+                        <i class="ri-calendar-line text-primary ri-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Application Timeline</h2>
+                </div>
+                <p class="text-gray-600 mb-8 italic">(Illustrative dates. Final timeline will be announced upon launch.)</p>
+                <div class="space-y-6">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-semibold text-secondary mb-2">Applications Open</h3>
+                            <p class="text-gray-600">December 1st</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-semibold text-secondary mb-2">Application Deadline</h3>
+                            <p class="text-gray-600">December 30th</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-semibold text-secondary mb-2">Shortlisting & Interviews</h3>
+                            <p class="text-gray-600">January</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-semibold text-secondary mb-2">Orientation & Disbursement</h3>
+                            <p class="text-gray-600">February</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notice -->
+    <section class="py-16 bg-primary bg-opacity-5">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-primary">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="ri-information-line text-primary ri-2x mr-4"></i>
+                        <h2 class="text-2xl font-bold text-secondary">Please Note</h2>
+                    </div>
+                    <p class="text-gray-700 text-lg mb-6">
+                        This program is not yet open for applications. The official launch and application details will be published soon on our website and social media pages.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="/newsletter.html" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105">
+                            <i class="ri-notification-line mr-2"></i>Get Notified
+                        </a>
+                        <a href="/contact.html" class="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="ri-question-line mr-2"></i>Ask Questions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- About Section -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                        <i class="ri-plant-line text-white ri-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold">Reuben Foundation Africa</span>
+                </div>
+                <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
+                <a href="/terms.html" class="text-primary underline hover:text-secondary transition">Terms &
+                    Conditions</a> <br>
+                <a href="/privacypolicy.html" class="text-primary underline hover:text-secondary transition">Privacy
+                    Policy</a>
+
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/share/1BTBZGkBq1/?mibextid=wwXIfr"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                        aria-label="Facebook">
+                        <i class="ri-facebook-fill text-white"></i>
+                    </a>
+                    <a href="https://x.com/reub_fdn_africa?s=11"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                        aria-label="Twitter">
+                        <i class="ri-twitter-x-fill text-white"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/reuben-foundation-africa/"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                        aria-label="LinkedIn">
+                        <i class="ri-linkedin-fill text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div>
+                <h3 class="text-base font-bold mb-2">Education</h3>
+                <ul class="space-y-0 text-sm">
+                    <li><a href="/education/scholarship.html"
+                            class="text-gray-400 hover:text-primary transition">Scholarships</a></li>
+                    <li><a href="/education/research.html" class="text-gray-400 hover:text-primary transition">Research
+                            Fund</a></li>
+                    <li><a href="/education.html" class="text-gray-400 hover:text-primary transition">International
+                            Student Loan</a></li>
+                    <li><a href="/education/schools.html" class="text-gray-400 hover:text-primary transition">School Under Trees Program</a></li>
+                </ul>
+
+                <h3 class="text-base font-bold mb-1 mt-2">Health & Wellbeing</h3>
+                <ul class="space-y-0 text-sm">
+                    <li><a href="/health/healthfund.html" class="text-gray-400 hover:text-primary transition">Health
+                            Access Fund</a></li>
+                    <li><a href="/health.html" class="text-gray-400 hover:text-primary transition">Maternal & Child
+                            Health</a></li>
+                    <li><a href="/health.html" class="text-gray-400 hover:text-primary transition">Mental Health
+                            Support</a></li>
+                    <li><a href="/health/nurses.html" class="text-gray-400 hover:text-primary transition">International
+                            Nurse Job Program</a></li>
+                </ul>
+            </div>
+
+            <!-- Programs Section 2 -->
+            <div>
+                <h3 class="text-base font-bold mb-2">Entrepreneurship</h3>
+                <ul class="space-y-0 text-sm">
+                    <li><a href="/enterprenuership/startup.html"
+                            class="text-gray-400 hover:text-primary transition">Startup Support Fund</a></li>
+                    <li><a href="/enterprenuership/creative.html"
+                            class="text-gray-400 hover:text-primary transition">Creative Arts Fund</a></li>
+                </ul>
+
+                <h3 class="text-base font-bold mb-1 mt-2">Social Change</h3>
+                <ul class="space-y-0 text-sm">
+                    <li><a href="/socialChange/justice.html" class="text-gray-400 hover:text-primary transition">Justice
+                            & Exoneration</a></li>
+                </ul>
+
+                <h3 class="text-base font-bold mb-1 mt-2">Opportunities</h3>
+                <ul class="space-y-0 text-sm">
+                    <li><a href="/donate.html" class="text-gray-400 hover:text-primary transition">Apply for a Grant</a>
+                    </li>
+                    <li><a href="/contact.html" class="text-gray-400 hover:text-primary transition">Partner With Us</a>
+                    </li>
+                    <li><a href="/contact.html" class="text-gray-400 hover:text-primary transition">Volunteer</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div>
+                <h3 class="text-lg font-bold mb-6">Contact</h3>
+                <ul class="space-y-0">
+                    <li class="flex items-start">
+                        <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                            <i class="ri-map-pin-line text-primary"></i>
+                        </span>
+                        <span class="text-gray-400">Kumasi, Ashanti Region- Ghana 🇬🇭</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                            <i class="ri-mail-line text-primary"></i>
+                        </span>
+                        <a href="mailto:info@reubenfoundation.africa"
+                            class="text-gray-400 hover:text-primary transition">info@reubenfoundation.africa</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                            <i class="ri-phone-line text-primary"></i>
+                        </span>
+                        <a href="https://wa.link/e2bx9g"
+                            class="text-gray-400 hover:text-primary transition flex items-center">
+                            <i class="ri-whatsapp-line text-primary mr-2"></i>
+                            +233553193813
+                        </a>
+                    </li>
+                </ul>
+                <br>
+                <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                <p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
+                <a href="/newsletter.html"
+                    class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition inline-flex items-center">
+                    <i class="ri-mail-send-line mr-2"></i>
+                    Subscribe
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preloader
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+                const preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000);
+
+            // Mobile menu toggle
+            const menuButton = document.querySelector('#mobile-menu-button');
+            const mobileNav = document.querySelector('#mobile-nav');
+            menuButton.addEventListener('click', function () {
+                mobileNav.classList.toggle('hidden');
+            });
+
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            // Add fade-in class and observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('fade-in');
+                observer.observe(section);
+            });
+
+            // Scroll to Top Button
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>

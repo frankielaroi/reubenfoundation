@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Under Trees Program - Reuben Foundation Africa</title>
+    <link rel="shortcut icon" href="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        (function (s, e, n, d, er) {
+            s['Sender'] = er;
+            s[er] = s[er] || function () {
+                (s[er].q = s[er].q || []).push(arguments)
+            }, s[er].l = 1 * new Date();
+            var a = e.createElement(n),
+                m = e.getElementsByTagName(n)[0];
+            a.async = 1;
+            a.src = d;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+        sender('1bca28fb585662')
+    </script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+        }
+    
+       
+    
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--tw-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+    
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+    
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        input:focus {
+            outline: none;
+        }
+    </style>
+    </head>
+    
+    <body class="bg-gray-50">
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top"
+            class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
+            <i class="ri-arrow-up-line ri-lg"></i>
+        </button>
+       
+    
+        <!-- Header -->
+        <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png"
+                        class="h-16 w-auto hover:scale-105 transition-transform duration-300"
+                        alt="Reuben Foundation Logo" />
+                    <div class="ml-4">
+                        <div class="text-right">
+                            <h1 class="text-l font-bold text-secondary">Reuben Foundation Africa</h1>
+                            <p class="text-gray-600 text-xs">We Invest In Changing Lives</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="/index.html"
+                            class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                            <i class="ri-home-line mr-2"></i>Home</a>
+                        <a href="/about.html"
+                            class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                            <i class="ri-information-line mr-2"></i>About</a>
+                        <a href="/programs.html"
+                            class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                            <i class="ri-stack-line mr-2"></i>Programs</a>
+                        <a href="/contact.html"
+                            class="header-nav-link text-secondary hover:text-primary font-medium transition-colors duration-300">
+                            <i class="ri-mail-line mr-2"></i>Contact</a>
+                    </nav>
+                    <a href="/donate.html"
+                        class="hidden md:block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        <i class="ri-heart-line mr-2"></i>Donate
+                    </a>
+                    <button
+                        class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors duration-300"
+                        id="mobile-menu-button">
+                        <i class="ri-menu-line text-secondary ri-2x"></i>
+                    </button>
+                </div>
+            </div>
+            <nav class="hidden flex-col absolute top-full left-0 w-full bg-white/80 backdrop-blur-md p-6 shadow-lg md:hidden space-y-4"
+                id="mobile-nav">
+                <a href="/index.html"
+                    class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                    <i class="ri-home-line mr-2"></i>Home</a>
+                <a href="/about.html"
+                    class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                    <i class="ri-information-line mr-2"></i>About</a>
+                <a href="/programs.html"
+                    class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                    <i class="ri-stack-line mr-2"></i>Programs</a>
+                <a href="/contact.html"
+                    class="text-secondary hover:text-primary font-medium transition-colors duration-300 hover:translate-x-2 transform block">
+                    <i class="ri-mail-line mr-2"></i>Contact</a>
+            </nav>
+        </header>
+    <!-- Page Banner -->
+    <section class="bg-secondary py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">School Under Trees Program</h1>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto">Bringing Lasting Classrooms to Every Child in Africa</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-3xl font-bold text-secondary mb-4 animate-slide-up">Overview</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto animate-slide-up delay-100">Across rural Africa, millions of children still learn under trees, in makeshift shelters, or in school buildings that are crumbling and unsafe. The “School Under Trees Program” by Reuben Foundation Africa is a bold intervention designed to end this cycle of neglect. We build safe, dignified classrooms where there are none, renovate schools in poor condition, and introduce clean, solar-powered infrastructure in communities without electricity or internet access.<br><br>This program is more than construction — it is a commitment to unlock the potential of Africa’s next generation, starting with where and how they learn.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h2 class="text-2xl font-bold text-secondary mb-4">The Problem We Are Solving</h2>
+                    <p class="text-gray-600 mb-4">Education is a right, not a privilege. But for thousands of children, especially in remote communities, school means sitting on the bare ground under scorching heat, rain, or wind, struggling to hear the teacher over the noise of nature.</p>
+                    <ul class="list-disc ml-6 text-gray-600 mb-4">
+                        <li>In Ghana, over 5,000 schools operate under trees or temporary structures.</li>
+                        <li>In South Sudan, children often study with no blackboards, books, or walls.</li>
+                        <li>In rural Nigeria, some schools have no roofs, forcing children to stay home during the rainy season.</li>
+                    </ul>
+                    <p class="text-gray-600 mb-4">The challenges do not end with buildings. Many schools lack electricity, clean water, toilets, and internet access, making learning even harder and widening the digital divide.</p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg mb-8 md:mb-0">
+                    <img src="https://img.freepik.com/free-photo/group-african-kids-classroom_23-2148892515.jpg?uid=R192628166&ga=GA1.1.963940418.1736699233&semt=ais_hybrid&w=740" alt="School Under Trees" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Our Three-Part Approach</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-bold text-primary mb-2">1. Building Classrooms Where None Exist</h3>
+                        <p class="text-gray-600 mb-2">We identify communities where children learn under trees or in temporary sheds and build fully equipped, weather-resistant classrooms using local labor and materials. Each school comes with:</p>
+                        <ul class="list-disc ml-6 text-gray-600">
+                            <li>Durable furniture</li>
+                            <li>Blackboard or whiteboard</li>
+                            <li>Lockable storage</li>
+                            <li>Rainwater collection (if needed)</li>
+                            <li>Gender-separated toilets</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-bold text-primary mb-2">2. Renovating Unsafe and Deplorable Schools</h3>
+                        <p class="text-gray-600 mb-2">Not all learning takes place under trees. In some areas, school buildings exist but are unsafe due to cracked walls, leaking roofs, or broken windows. We renovate these schools, making them safe, clean, and dignified environments for learning.</p>
+                        <p class="text-gray-600">Imagine a classroom where children no longer scatter when it rains, and where solar lights keep learning alive even after dark. This is the future we are building together.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-bold text-primary mb-2">3. Power and Connectivity for the Marginalized</h3>
+                        <p class="text-gray-600 mb-2">In communities with no electricity or internet, we take extra steps to ensure that children are not left behind in the digital age. We install:</p>
+                        <ul class="list-disc ml-6 text-gray-600">
+                            <li>Solar panels to power lights and digital devices</li>
+                            <li>Digital learning kits, including tablets or e-readers with offline content</li>
+                            <li>Wi-Fi connectivity (where feasible) through satellite or mobile data</li>
+                            <li>Teacher training on using basic ICT tools for education</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gray-50 rounded-lg shadow-md p-8">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Impact Areas</h2>
+                <p class="text-gray-600 mb-4">Our program focuses on areas where education is most at risk:</p>
+                <ul class="list-disc ml-6 text-gray-600 mb-4">
+                    <li>Rural and remote communities</li>
+                    <li>Conflict-affected regions</li>
+                    <li>Informal settlements</li>
+                    <li>Climate-vulnerable zones</li>
+                </ul>
+                <p class="text-gray-600">We work closely with local governments, education authorities, community leaders, and school management committees to ensure sustainability and accountability.</p>
+            </div>
+
+            <div class="mt-16 bg-gray-50 rounded-lg shadow-md p-8">
+                <h2 class="text-2xl font-bold text-secondary mb-4">How You Can Support</h2>
+                <p class="text-gray-600 mb-4">You can play a vital role in transforming education across Africa. Here are key ways to get involved:</p>
+                <ul class="list-disc ml-6 text-gray-600 mb-4">
+                    <li><strong>Sponsor a Classroom or School Block:</strong> Help us construct safe and modern classrooms for children currently learning under trees or in broken buildings. You can fund a single classroom or an entire school block.</li>
+                    <li><strong>Donate Solar Equipment:</strong> Support the installation of clean, renewable energy in schools without electricity. Your donation of solar panels, batteries, and inverters will bring light and power to learning.</li>
+                    <li><strong>Contribute Furniture and Learning Materials:</strong> Supply desks, chairs, books, chalkboards, and digital learning devices. Every item donated helps create a more effective and comfortable learning space.</li>
+                    <li><strong>Partner with Us:</strong> Whether you represent a government agency, corporation, foundation, or nonprofit, we welcome strategic partnerships to scale impact, co-fund projects, or deliver support services.</li>
+                    <li><strong>Volunteer Your Expertise:</strong> Architects, engineers, educators, project managers, and community mobilizers can lend their skills on the ground. Your time and talent can directly shape better futures for children.</li>
+                </ul>
+            </div>
+
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Our Commitment</h2>
+                <p class="text-gray-600 mb-4">At Reuben Foundation Africa, we believe every child deserves to learn in an environment that is safe, dignified, and equipped for success. Through our School Under Trees and School Renovation Program, we are creating lasting change across underserved communities.</p>
+                <p class="text-gray-600 mb-4">We are not just constructing buildings. We are building hope. We are restoring dignity to children who were once forgotten. We are bringing electricity, connectivity, and opportunity to places that have long been left behind.</p>
+                <p class="text-gray-600 mb-4">Our goal is simple yet bold: to ensure that no African child is left learning under a tree, sitting on a rock, or walking away from school because the classroom is unsafe or non-existent.</p>
+                <p class="text-gray-600">Together, we can reshape the educational experience across Africa; turning tree-side lessons into modern learning environments, bringing solar power where there was only darkness, and helping communities rise through the power of education.</p>
+            </div>
+
+            <div class="mt-16 bg-primary text-white rounded-lg shadow-lg p-8 text-center">
+                <h2 class="text-2xl font-bold mb-4">Partner With Us</h2>
+                <p class="mb-4">Reuben Foundation Africa welcomes partnerships with government agencies, NGOs, corporate sponsors, faith-based organizations, and individuals who believe in transforming education across Africa.</p>
+                <p>For partnership opportunities, please email us at <span class="font-bold">info@reubenfoundation.africa</span></p>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i class="ri-plant-line text-white ri-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Reuben Foundation Africa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering Africa through education, healthcare, and innovation.</p>
+                    <a href="/terms.html" class="text-primary underline hover:text-secondary transition">Terms &
+                        Conditions</a> <br>
+                    <a href="/privacypolicy.html" class="text-primary underline hover:text-secondary transition">Privacy
+                        Policy</a>
+    
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1BTBZGkBq1/?mibextid=wwXIfr"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="Facebook">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="https://x.com/reub_fdn_africa?s=11"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="Twitter">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/reuben-foundation-africa/"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+                            aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div>
+                    <h3 class="text-base font-bold mb-2">Education</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/education/scholarship.html"
+                                class="text-gray-400 hover:text-primary transition">Scholarships</a></li>
+                        <li><a href="/education/research.html" class="text-gray-400 hover:text-primary transition">Research
+                                Fund</a></li>
+                        <li><a href="/education.html" class="text-gray-400 hover:text-primary transition">International
+                                Student Loan</a></li>
+                        <li><a href="/education/schools.html" class="text-gray-400 hover:text-primary transition">School
+                                Under Trees Program</a></li>
+                    </ul>
+    
+                    <h3 class="text-base font-bold mb-1 mt-2">Health & Wellbeing</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/health/healthfund.html" class="text-gray-400 hover:text-primary transition">Health
+                                Access Fund</a></li>
+                        <li><a href="/health.html" class="text-gray-400 hover:text-primary transition">Maternal & Child
+                                Health</a></li>
+                        <li><a href="/health.html" class="text-gray-400 hover:text-primary transition">Mental Health
+                                Support</a></li>
+                        <li><a href="/health/nurses.html" class="text-gray-400 hover:text-primary transition">International
+                                Nurse Job Program</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Programs Section 2 -->
+                <div>
+                    <h3 class="text-base font-bold mb-2">Entrepreneurship</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/enterprenuership/startup.html"
+                                class="text-gray-400 hover:text-primary transition">Startup Support Fund</a></li>
+                        <li><a href="/enterprenuership/creative.html"
+                                class="text-gray-400 hover:text-primary transition">Creative Arts Fund</a></li>
+                    </ul>
+    
+                    <h3 class="text-base font-bold mb-1 mt-2">Social Change</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/socialChange/justice.html" class="text-gray-400 hover:text-primary transition">Justice
+                                & Exoneration</a></li>
+                    </ul>
+    
+                    <h3 class="text-base font-bold mb-1 mt-2">Opportunities</h3>
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="/donate.html" class="text-gray-400 hover:text-primary transition">Apply for a Grant</a>
+                        </li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary transition">Partner With Us</a>
+                        </li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-primary transition">Volunteer</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-0">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </span>
+                            <span class="text-gray-400">Kumasi, Ashanti Region- Ghana 🇬🇭</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-mail-line text-primary"></i>
+                            </span>
+                            <a href="mailto:info@reubenfoundation.africa"
+                                class="text-gray-400 hover:text-primary transition">info@reubenfoundation.africa</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 mt-1 flex items-center justify-center mr-3">
+                                <i class="ri-phone-line text-primary"></i>
+                            </span>
+                            <a href="https://wa.link/e2bx9g"
+                                class="text-gray-400 hover:text-primary transition flex items-center">
+                                <i class="ri-whatsapp-line text-primary mr-2"></i>
+                                +233553193813
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                    <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
+                    <a href="/newsletter.html"
+                        class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition inline-flex items-center">
+                        <i class="ri-mail-send-line mr-2"></i>
+                        Subscribe
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Copyright Section -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">© 2025 Reuben Foundation Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            // Mobile menu toggle
+            const menuButton = document.querySelector('#mobile-menu-button');
+            const mobileNav = document.querySelector('#mobile-nav');
+            if (menuButton && mobileNav) {
+                menuButton.addEventListener('click', function () {
+                    mobileNav.classList.toggle('hidden');
+                });
+            }
+
+
+
+
+            // Scroll to Top Button
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
