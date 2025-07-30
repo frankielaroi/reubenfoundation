@@ -1,113 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsletter - Reuben Foundation Africa</title>
+    <title>Digital Health Record System for Africa - Reuben Foundation Africa</title>
     <link rel="shortcut icon" href="/assets/7909093c-8517-4de9-86a1-ff7e93bdf607_removalai_preview.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>
-        (function (s, e, n, d, er) {
-            s['Sender'] = er;
-            s[er] = s[er] || function () {
-                (s[er].q = s[er].q || []).push(arguments)
-            }, s[er].l = 1 * new Date();
-            var a = e.createElement(n),
-                m = e.getElementsByTagName(n)[0];
-            a.async = 1;
-            a.src = d;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-        sender('1bca28fb585662')
-    </script>
     <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF5722', secondary: '#0A2540' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
     <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            opacity: 0;
-            transition: opacity 0.5s ease-in;
-        }
-
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out;
-        }
-
-        .preloader-spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid var(--tw-color-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .header-nav-link {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .header-nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #FF5722;
-            transition: width 0.3s ease;
-        }
-
-        .header-nav-link:hover::after {
-            width: 100%;
-        }
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; background: #f7f7f7; }
+        .header-nav-link { position: relative; padding: 0.5rem 0; }
+        .header-nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: #FF5722; transition: width 0.3s ease; }
+        .header-nav-link:hover::after { width: 100%; }
     </style>
 </head>
-
 <body class="bg-gray-50">
-    <!-- Dark Mode Toggle Button -->
-    <button id="dark-mode-toggle" class="fixed top-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
-        <i class="ri-moon-line ri-lg"></i>
-    </button>
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition">
         <i class="ri-arrow-up-line ri-lg"></i>
@@ -171,75 +83,85 @@
         </nav>
     </header>
 
-    <!-- Newsletter Hero Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">Stay Connected With Our Newsletter</h1>
-                <p class="text-lg text-gray-700 mb-8">Join our community and stay updated with the latest news, events, and impact stories from Reuben Foundation Africa.</p>
-            </div>
+    <!-- Page Banner -->
+    <section class="bg-secondary py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Digital Health Record System for Africa</h1>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto">Transforming healthcare with secure, offline-first, AI-powered medical records</p>
         </div>
     </section>
 
-    <!-- Newsletter Form Section -->
+    <!-- Main Content -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <div class="text-center mb-8">
-                        <h2 class="text-3xl font-bold text-secondary mb-4">Subscribe to Our Newsletter</h2>
-                        <p class="text-gray-600">Get regular updates on our projects, impact stories, and opportunities to get involved.</p>
-                    </div>
-                    
-                    <!-- Newsletter Form -->
-                    <div class="sender-form-field" data-sender-form-id="maxugvf2en57z5fnojj"></div>
-                    
-                    <div class="mt-8 text-center text-gray-600">
-                        <p class="text-sm">By subscribing, you agree to receive email communications from Reuben Foundation Africa. <br>You can unsubscribe at any time using the link in our emails.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Benefits Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-secondary mb-4">Why Subscribe?</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">Our newsletter is designed to keep you informed and inspired.</p>
+                <h2 class="text-3xl font-bold text-secondary mb-4">Overview</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Across Africa, millions of healthcare professionals continue to rely on paper-based records, leading to inefficiencies, loss of critical information, and delays in treatment. In response, Reuben Foundation Africa is developing a comprehensive digital health record system designed specifically for African healthcare environments.<br><br>This innovative platform will serve as a secure, offline-first, AI-powered electronic medical record (EMR) system, tailored to support healthcare delivery in both urban hospitals and rural health facilities — especially in areas with limited or unreliable internet connectivity.</p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                        <i class="ri-newspaper-line text-primary ri-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-secondary mb-3">Latest Updates</h3>
-                    <p class="text-gray-600">Stay informed about our current projects, achievements, and upcoming initiatives across Africa.</p>
+            <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
+                <div>
+                    <h2 class="text-2xl font-bold text-secondary mb-4">Our Vision</h2>
+                    <p class="text-gray-600 mb-4">To transform healthcare across Africa by replacing outdated, fragmented recordkeeping systems with a reliable, scalable, and intelligent digital platform that empowers healthcare professionals, protects patient data, and improves health outcomes.</p>
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                        <i class="ri-calendar-event-line text-primary ri-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-secondary mb-3">Event Invitations</h3>
-                    <p class="text-gray-600">Get early access to our workshops, webinars, fundraising events, and community gatherings.</p>
+                <div class="rounded-lg overflow-hidden shadow-lg mb-8 md:mb-0">
+                    <img src="https://img.freepik.com/free-photo/doctor-hospital_23-2148829172.jpg?w=900" alt="Digital Health Record" class="w-full h-full object-cover">
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                        <i class="ri-hand-heart-line text-primary ri-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-secondary mb-3">Volunteer Opportunities</h3>
-                    <p class="text-gray-600">Be the first to learn about ways to contribute your skills and time to our mission in Africa.</p>
-                </div>
+            </div>
+
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Why It Matters</h2>
+                <ul class="list-disc ml-6 text-gray-600 mb-4">
+                    <li>Patient files are often misplaced or incomplete.</li>
+                    <li>Health workers struggle with high workloads and lack access to patient history.</li>
+                    <li>Data needed for planning and reporting is difficult to collect or verify.</li>
+                    <li>Rural communities are excluded from digital innovations due to internet limitations.</li>
+                </ul>
+                <p class="text-gray-600">Our system directly addresses these challenges by providing a robust digital solution that works offline, syncs automatically when connected, and is customized to local workflows and regulatory standards.</p>
+            </div>
+
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Key Features</h2>
+                <ul class="list-disc ml-6 text-gray-600 mb-4">
+                    <li><strong>Offline Functionality:</strong> Access and update patient records without an internet connection. All data syncs securely once connectivity is restored.</li>
+                    <li><strong>AI-Enabled Tools:</strong> Built-in decision-support features will help healthcare providers identify high-risk patients, recommend treatments, and flag inconsistencies in real-time.</li>
+                    <li><strong>Modular Recordkeeping:</strong> Capture detailed information across various care modules:
+                        <ul class="list-disc ml-6">
+                            <li>Outpatient visits</li>
+                            <li>Maternal and child health</li>
+                            <li>Emergency and surgical care</li>
+                            <li>HIV, TB, and chronic disease management</li>
+                            <li>Immunization and family planning</li>
+                        </ul>
+                    </li>
+                    <li><strong>Inter-Facility Data Sharing:</strong> With proper authorization, facilities can share patient records to ensure continuity of care, referrals, and faster emergency response.</li>
+                    <li><strong>User-Friendly Design:</strong> Optimized for low-resource settings, with intuitive interfaces that require minimal training and work well on tablets, desktops, or mobile devices.</li>
+                    <li><strong>Security & Privacy:</strong> Patient data is encrypted, stored locally with secure backups, and governed by strict access controls and national data protection laws.</li>
+                    <li><strong>Integrated Reporting & Dashboards:</strong> Automated generation of facility-level and district-level reports for better monitoring, planning, and funding decisions.</li>
+                    <li><strong>Training and Support:</strong> Healthcare workers will receive full training and ongoing support, including updates and technical assistance.</li>
+                </ul>
+            </div>
+
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Who Will Benefit</h2>
+                <ul class="list-disc ml-6 text-gray-600 mb-4">
+                    <li>Public and private hospitals</li>
+                    <li>Health centers and rural clinics</li>
+                    <li>CHPS compounds and mobile outreach teams</li>
+                    <li>Community health nurses and midwives</li>
+                    <li>District health administrations and policymakers</li>
+                </ul>
+                <p class="text-gray-600">Whether in a remote village clinic or a busy urban hospital, this system will improve the quality, accuracy, and speed of care, while empowering health workers to serve their communities more effectively.</p>
+            </div>
+
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-secondary mb-4">Our Commitment</h2>
+                <p class="text-gray-600 mb-4">Reuben Foundation Africa is committed to ensuring that technology serves humanity. This digital health record initiative will play a critical role in closing the healthcare gap and building resilient health systems across Africa.</p>
+                <p class="text-gray-600">We invite governments, donors, NGOs, and healthcare partners to join us in piloting and scaling this transformative solution.</p>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-     <footer class="bg-gray-900 text-white py-12">
+</body>
+<footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-4 gap-8">
             <!-- About Section -->
@@ -285,7 +207,8 @@
                             Fund</a></li>
                     <li><a href="/education.html" class="text-gray-400 hover:text-primary transition">International
                             Student Loan</a></li>
-                    <li><a href="/education/schools.html" class="text-gray-400 hover:text-primary transition">School Under Trees Program</a></li>
+                    <li><a href="/education/schools.html" class="text-gray-400 hover:text-primary transition">School
+                            Under Trees Program</a></li>
                 </ul>
 
                 <h3 class="text-base font-bold mb-1 mt-2">Health & Wellbeing</h3>
@@ -298,7 +221,8 @@
                             Support</a></li>
                     <li><a href="/health/nurses.html" class="text-gray-400 hover:text-primary transition">International
                             Nurse Job Program</a></li>
-                    <li><a href="/health/healthrecord.html" class="text-gray-400 hover:text-primary transition">Digital Health Record System</a></li>
+                    <li><a href="/health/healthrecord.html" class="text-gray-400 hover:text-primary transition">Digital
+                            Health Record System</a></li>
                 </ul>
             </div>
 
@@ -373,58 +297,4 @@
         </div>
     </div>
 </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Preloader
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-                const preloader = document.querySelector('.preloader');
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500);
-            }, 1000);
-
-            // Mobile menu toggle
-            const menuButton = document.querySelector('#mobile-menu-button');
-            const mobileNav = document.querySelector('#mobile-nav');
-            menuButton.addEventListener('click', function () {
-                mobileNav.classList.toggle('hidden');
-            });
-
-            // Intersection Observer for fade-in animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            // Add fade-in class and observe all sections
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.add('fade-in');
-                observer.observe(section);
-            });
-
-            // Scroll to Top Button
-            const scrollToTopButton = document.getElementById('scroll-to-top');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    scrollToTopButton.classList.remove('hidden');
-                } else {
-                    scrollToTopButton.classList.add('hidden');
-                }
-            });
-
-            scrollToTopButton.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-    </script>
-</body>
-
 </html>
